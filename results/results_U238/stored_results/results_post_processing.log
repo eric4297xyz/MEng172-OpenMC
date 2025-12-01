@@ -1,0 +1,17 @@
+Reading depletion results...
+Traceback (most recent call last):
+  File "/workspaces/MEng172-OpenMC/models/FusionFissionReactor/Iteration1/results.py", line 14, in <module>
+    results = openmc.deplete.Results("depletion_results.h5")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vscode/mamba/envs/openmc/lib/python3.11/site-packages/openmc/deplete/results.py", line 73, in __init__
+    n = fh["number"][...].shape[0]
+        ~~^^^^^^^^^^
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "/home/vscode/mamba/envs/openmc/lib/python3.11/site-packages/h5py/_hl/group.py", line 360, in __getitem__
+    oid = h5o.open(self.id, self._e(name), lapl=self._lapl)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5o.pyx", line 257, in h5py.h5o.open
+KeyError: "Unable to synchronously open object (object 'number' doesn't exist)"

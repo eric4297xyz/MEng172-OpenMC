@@ -1,0 +1,501 @@
+nohup: ignoring input
+/home/vscode/mamba/envs/openmc/lib/python3.11/site-packages/openmc/source.py:658: FutureWarning: This class is deprecated in favor of 'IndependentSource'
+  warnings.warn("This class is deprecated in favor of 'IndependentSource'", FutureWarning)
+                                %%%%%%%%%%%%%%%
+                           %%%%%%%%%%%%%%%%%%%%%%%%
+                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                    %%%%%%%%%%%%%%%%%%%%%%%%
+                                     %%%%%%%%%%%%%%%%%%%%%%%%
+                 ###############      %%%%%%%%%%%%%%%%%%%%%%%%
+                ##################     %%%%%%%%%%%%%%%%%%%%%%%
+                ###################     %%%%%%%%%%%%%%%%%%%%%%%
+                ####################     %%%%%%%%%%%%%%%%%%%%%%
+                #####################     %%%%%%%%%%%%%%%%%%%%%
+                ######################     %%%%%%%%%%%%%%%%%%%%
+                #######################     %%%%%%%%%%%%%%%%%%
+                 #######################     %%%%%%%%%%%%%%%%%
+                 ######################     %%%%%%%%%%%%%%%%%
+                  ####################     %%%%%%%%%%%%%%%%%
+                    #################     %%%%%%%%%%%%%%%%%
+                     ###############     %%%%%%%%%%%%%%%%
+                       ############     %%%%%%%%%%%%%%%
+                          ########     %%%%%%%%%%%%%%
+                                      %%%%%%%%%%%
+
+                 | The OpenMC Monte Carlo Code
+       Copyright | 2011-2025 MIT, UChicago Argonne LLC, and contributors
+         License | https://docs.openmc.org/en/latest/license.html
+         Version | 0.15.2
+     Commit Hash | e23760b0264c66fb7bb373aa0596801e5209d920
+       Date/Time | 2025-11-30 07:31:57
+  OpenMP Threads | 2
+
+ Reading settings XML file...
+ Reading cross sections XML file...
+ Reading materials XML file...
+ Reading geometry XML file...
+ Reading O16 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/O16.h5
+ Reading U235 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U235.h5
+ Reading U238 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U238.h5
+ Reading Al27 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Al27.h5
+ Reading Na23 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Na23.h5
+ Minimum neutron data temperature: 294 K
+ Maximum neutron data temperature: 294 K
+ Reading tallies XML file...
+ Preparing distributed cell instances...
+ Reading plot XML file...
+ Writing summary.h5 file...
+ Reading H1 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/H1.h5
+ Reading H2 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/H2.h5
+ Reading H3 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/H3.h5
+ Reading He3 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/He3.h5
+ Reading He4 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/He4.h5
+ Reading Li6 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Li6.h5
+ Reading Li7 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Li7.h5
+ Reading Be9 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Be9.h5
+ Reading B10 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/B10.h5
+ Reading B11 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/B11.h5
+ Reading C12 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/C12.h5
+ Reading C13 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/C13.h5
+ Reading N14 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/N14.h5
+ Reading N15 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/N15.h5
+ Reading O17 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/O17.h5
+ Reading O18 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/O18.h5
+ Reading F19 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/F19.h5
+ Reading Fe56 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Fe56.h5
+ Reading Fe57 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Fe57.h5
+ Reading Fe58 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Fe58.h5
+ Reading Co59 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Co59.h5
+ Reading Ni58 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ni58.h5
+ Reading Ni59 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ni59.h5
+ Reading Ni60 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ni60.h5
+ Reading Ni61 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ni61.h5
+ Reading Ni62 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ni62.h5
+ Reading Ni63 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ni63.h5
+ Reading Ni64 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ni64.h5
+ Reading Cu63 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cu63.h5
+ Reading Cu64 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cu64.h5
+ Reading Cu65 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cu65.h5
+ Reading Zn64 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Zn64.h5
+ Reading Zn65 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Zn65.h5
+ Reading Zn66 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Zn66.h5
+ Reading Zn67 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Zn67.h5
+ Reading Zn68 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Zn68.h5
+ Reading Zn69 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Zn69.h5
+ Reading Zn70 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Zn70.h5
+ Reading Ga69 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ga69.h5
+ Reading Ga70 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ga70.h5
+ Reading Ga71 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ga71.h5
+ Reading Ge70 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ge70.h5
+ Reading Ge71 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ge71.h5
+ Reading Ge72 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ge72.h5
+ Reading Ge73 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ge73.h5
+ Reading Ge74 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ge74.h5
+ Reading Ge75 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ge75.h5
+ Reading Ge76 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ge76.h5
+ Reading As73 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/As73.h5
+ Reading As74 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/As74.h5
+ Reading As75 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/As75.h5
+ Reading Se74 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Se74.h5
+ Reading Se75 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Se75.h5
+ Reading Se76 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Se76.h5
+ Reading Se77 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Se77.h5
+ Reading Se78 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Se78.h5
+ Reading Se79 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Se79.h5
+ WARNING: Negative value(s) found on probability table for nuclide Se79 at 20K
+ WARNING: Negative value(s) found on probability table for nuclide Se79 at 294K
+ WARNING: Negative value(s) found on probability table for nuclide Se79 at 600K
+ Reading Se80 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Se80.h5
+ Reading Se81 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Se81.h5
+ Reading Se82 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Se82.h5
+ Reading Br79 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Br79.h5
+ Reading Br80 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Br80.h5
+ Reading Br81 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Br81.h5
+ Reading Kr78 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Kr78.h5
+ Reading Kr79 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Kr79.h5
+ Reading Kr80 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Kr80.h5
+ Reading Kr81 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Kr81.h5
+ Reading Kr82 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Kr82.h5
+ Reading Kr83 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Kr83.h5
+ Reading Kr84 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Kr84.h5
+ Reading Kr85 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Kr85.h5
+ Reading Kr86 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Kr86.h5
+ Reading Rb85 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Rb85.h5
+ Reading Rb86 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Rb86.h5
+ Reading Rb87 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Rb87.h5
+ Reading Sr84 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sr84.h5
+ Reading Sr85 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sr85.h5
+ Reading Sr86 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sr86.h5
+ Reading Sr87 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sr87.h5
+ Reading Sr88 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sr88.h5
+ Reading Sr89 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sr89.h5
+ Reading Sr90 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sr90.h5
+ Reading Y89 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Y89.h5
+ Reading Y90 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Y90.h5
+ Reading Y91 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Y91.h5
+ Reading Zr90 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Zr90.h5
+ Reading Zr91 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Zr91.h5
+ Reading Zr92 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Zr92.h5
+ Reading Zr93 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Zr93.h5
+ Reading Zr94 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Zr94.h5
+ Reading Zr95 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Zr95.h5
+ Reading Zr96 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Zr96.h5
+ WARNING: Negative value(s) found on probability table for nuclide Zr96 at 20K
+ WARNING: Negative value(s) found on probability table for nuclide Zr96 at 294K
+ WARNING: Negative value(s) found on probability table for nuclide Zr96 at 600K
+ Reading Nb93 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nb93.h5
+ Reading Nb94 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nb94.h5
+ WARNING: Negative value(s) found on probability table for nuclide Nb94 at 294K
+ WARNING: Negative value(s) found on probability table for nuclide Nb94 at 600K
+ Reading Nb95 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nb95.h5
+ WARNING: Negative value(s) found on probability table for nuclide Nb95 at 20K
+ WARNING: Negative value(s) found on probability table for nuclide Nb95 at 294K
+ WARNING: Negative value(s) found on probability table for nuclide Nb95 at 600K
+ Reading Mo92 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Mo92.h5
+ Reading Mo93 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Mo93.h5
+ Reading Mo94 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Mo94.h5
+ Reading Mo95 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Mo95.h5
+ Reading Mo96 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Mo96.h5
+ Reading Mo97 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Mo97.h5
+ Reading Mo98 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Mo98.h5
+ Reading Mo99 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Mo99.h5
+ WARNING: Negative value(s) found on probability table for nuclide Mo99 at 20K
+ WARNING: Negative value(s) found on probability table for nuclide Mo99 at 294K
+ WARNING: Negative value(s) found on probability table for nuclide Mo99 at 600K
+ Reading Mo100 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Mo100.h5
+ Reading Tc98 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Tc98.h5
+ Reading Tc99 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Tc99.h5
+ Reading Ru96 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ru96.h5
+ Reading Ru97 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ru97.h5
+ Reading Ru98 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ru98.h5
+ Reading Ru99 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ru99.h5
+ Reading Ru100 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ru100.h5
+ Reading Ru101 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ru101.h5
+ Reading Ru102 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ru102.h5
+ Reading Ru103 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ru103.h5
+ Reading Ru104 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ru104.h5
+ Reading Ru105 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ru105.h5
+ Reading Ru106 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ru106.h5
+ Reading Rh103 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Rh103.h5
+ Reading Rh104 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Rh104.h5
+ Reading Rh105 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Rh105.h5
+ Reading Pd102 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pd102.h5
+ Reading Pd103 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pd103.h5
+ Reading Pd104 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pd104.h5
+ Reading Pd105 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pd105.h5
+ Reading Pd106 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pd106.h5
+ Reading Pd107 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pd107.h5
+ Reading Pd108 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pd108.h5
+ Reading Pd109 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pd109.h5
+ Reading Pd110 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pd110.h5
+ Reading Ag107 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ag107.h5
+ Reading Ag108 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ag108.h5
+ Reading Ag109 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ag109.h5
+ Reading Ag110_m1 from
+ /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ag110_m1.h5
+ Reading Ag111 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ag111.h5
+ Reading Ag112 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ag112.h5
+ Reading Ag113 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ag113.h5
+ Reading Ag114 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ag114.h5
+ Reading Ag115 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ag115.h5
+ Reading Ag116 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ag116.h5
+ Reading Ag117 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ag117.h5
+ Reading Ag118_m1 from
+ /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ag118_m1.h5
+ WARNING: Negative value(s) found on probability table for nuclide Ag118_m1 at
+          20K
+ WARNING: Negative value(s) found on probability table for nuclide Ag118_m1 at
+          294K
+ WARNING: Negative value(s) found on probability table for nuclide Ag118_m1 at
+          600K
+ Reading Cd106 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cd106.h5
+ WARNING: Negative value(s) found on probability table for nuclide Cd106 at 20K
+ WARNING: Negative value(s) found on probability table for nuclide Cd106 at 294K
+ WARNING: Negative value(s) found on probability table for nuclide Cd106 at 600K
+ Reading Cd107 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cd107.h5
+ Reading Cd108 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cd108.h5
+ Reading Cd109 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cd109.h5
+ Reading Cd110 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cd110.h5
+ Reading Cd111 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cd111.h5
+ Reading Cd112 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cd112.h5
+ Reading Cd113 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cd113.h5
+ Reading Cd114 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cd114.h5
+ Reading Cd115_m1 from
+ /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cd115_m1.h5
+ Reading Cd116 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cd116.h5
+ Reading In113 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/In113.h5
+ Reading In114 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/In114.h5
+ Reading In115 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/In115.h5
+ Reading Sn112 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sn112.h5
+ Reading Sn113 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sn113.h5
+ Reading Sn114 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sn114.h5
+ Reading Sn115 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sn115.h5
+ Reading Sn116 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sn116.h5
+ Reading Sn117 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sn117.h5
+ Reading Sn118 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sn118.h5
+ Reading Sn119 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sn119.h5
+ Reading Sn120 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sn120.h5
+ Reading Sn121_m1 from
+ /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sn121_m1.h5
+ Reading Sn122 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sn122.h5
+ Reading Sn123 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sn123.h5
+ WARNING: Negative value(s) found on probability table for nuclide Sn123 at 20K
+ WARNING: Negative value(s) found on probability table for nuclide Sn123 at 294K
+ WARNING: Negative value(s) found on probability table for nuclide Sn123 at 600K
+ Reading Sn124 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sn124.h5
+ Reading Sn125 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sn125.h5
+ Reading Sn126 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sn126.h5
+ Reading Sb121 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sb121.h5
+ Reading Sb122 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sb122.h5
+ Reading Sb123 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sb123.h5
+ Reading Sb124 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sb124.h5
+ Reading Sb125 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sb125.h5
+ Reading Sb126 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sb126.h5
+ Reading Te120 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Te120.h5
+ WARNING: Negative value(s) found on probability table for nuclide Te120 at 600K
+ Reading Te121 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Te121.h5
+ Reading Te121_m1 from
+ /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Te121_m1.h5
+ Reading Te122 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Te122.h5
+ Reading Te123 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Te123.h5
+ Reading Te124 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Te124.h5
+ Reading Te125 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Te125.h5
+ Reading Te126 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Te126.h5
+ Reading Te127_m1 from
+ /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Te127_m1.h5
+ Reading Te128 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Te128.h5
+ Reading Te129_m1 from
+ /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Te129_m1.h5
+ Reading Te130 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Te130.h5
+ Reading Te131 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Te131.h5
+ Reading Te131_m1 from
+ /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Te131_m1.h5
+ Reading Te132 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Te132.h5
+ Reading I127 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/I127.h5
+ Reading I128 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/I128.h5
+ Reading I129 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/I129.h5
+ Reading I130 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/I130.h5
+ Reading I131 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/I131.h5
+ WARNING: Negative value(s) found on probability table for nuclide I131 at 20K
+ WARNING: Negative value(s) found on probability table for nuclide I131 at 294K
+ WARNING: Negative value(s) found on probability table for nuclide I131 at 600K
+ Reading I132 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/I132.h5
+ Reading I132_m1 from
+ /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/I132_m1.h5
+ Reading I133 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/I133.h5
+ Reading I134 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/I134.h5
+ Reading I135 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/I135.h5
+ Reading Xe123 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Xe123.h5
+ Reading Xe124 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Xe124.h5
+ Reading Xe125 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Xe125.h5
+ Reading Xe126 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Xe126.h5
+ Reading Xe127 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Xe127.h5
+ Reading Xe128 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Xe128.h5
+ Reading Xe129 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Xe129.h5
+ Reading Xe130 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Xe130.h5
+ Reading Xe131 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Xe131.h5
+ Reading Xe132 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Xe132.h5
+ Reading Xe133 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Xe133.h5
+ Reading Xe134 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Xe134.h5
+ Reading Xe135 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Xe135.h5
+ Reading Xe136 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Xe136.h5
+ Reading Cs133 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cs133.h5
+ Reading Cs134 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cs134.h5
+ Reading Cs135 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cs135.h5
+ Reading Cs136 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cs136.h5
+ WARNING: Negative value(s) found on probability table for nuclide Cs136 at 294K
+ WARNING: Negative value(s) found on probability table for nuclide Cs136 at 600K
+ Reading Cs137 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cs137.h5
+ Reading Ba130 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ba130.h5
+ Reading Ba131 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ba131.h5
+ Reading Ba132 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ba132.h5
+ Reading Ba133 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ba133.h5
+ Reading Ba134 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ba134.h5
+ Reading Ba135 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ba135.h5
+ Reading Ba136 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ba136.h5
+ Reading Ba137 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ba137.h5
+ Reading Ba138 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ba138.h5
+ Reading Ba139 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ba139.h5
+ Reading Ba140 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ba140.h5
+ Reading La138 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/La138.h5
+ Reading La139 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/La139.h5
+ Reading La140 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/La140.h5
+ Reading Ce136 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ce136.h5
+ Reading Ce137 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ce137.h5
+ Reading Ce137_m1 from
+ /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ce137_m1.h5
+ Reading Ce138 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ce138.h5
+ Reading Ce139 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ce139.h5
+ Reading Ce140 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ce140.h5
+ Reading Ce141 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ce141.h5
+ Reading Ce142 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ce142.h5
+ Reading Ce143 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ce143.h5
+ Reading Ce144 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ce144.h5
+ Reading Pr141 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pr141.h5
+ Reading Pr142 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pr142.h5
+ Reading Pr143 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pr143.h5
+ Reading Nd142 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nd142.h5
+ Reading Nd143 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nd143.h5
+ Reading Nd144 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nd144.h5
+ Reading Nd145 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nd145.h5
+ Reading Nd146 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nd146.h5
+ Reading Nd147 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nd147.h5
+ Reading Nd148 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nd148.h5
+ Reading Nd149 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nd149.h5
+ Reading Nd150 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nd150.h5
+ Reading Pm143 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pm143.h5
+ Reading Pm144 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pm144.h5
+ Reading Pm145 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pm145.h5
+ Reading Pm146 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pm146.h5
+ Reading Pm147 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pm147.h5
+ Reading Pm148 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pm148.h5
+ Reading Pm148_m1 from
+ /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pm148_m1.h5
+ Reading Pm149 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pm149.h5
+ Reading Pm150 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pm150.h5
+ Reading Pm151 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pm151.h5
+ Reading Sm144 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm144.h5
+ Reading Sm145 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm145.h5
+ Reading Sm146 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm146.h5
+ Reading Sm147 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm147.h5
+ Reading Sm148 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm148.h5
+ Reading Sm149 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm149.h5
+ Reading Sm150 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm150.h5
+ Reading Sm151 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm151.h5
+ Reading Sm152 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm152.h5
+ Reading Sm153 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm153.h5
+ Reading Sm154 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm154.h5
+ Reading Eu151 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Eu151.h5
+ Reading Eu152 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Eu152.h5
+ Reading Eu153 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Eu153.h5
+ Reading Eu154 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Eu154.h5
+ Reading Eu155 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Eu155.h5
+ Reading Eu156 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Eu156.h5
+ WARNING: Negative value(s) found on probability table for nuclide Eu156 at 20K
+ WARNING: Negative value(s) found on probability table for nuclide Eu156 at 294K
+ WARNING: Negative value(s) found on probability table for nuclide Eu156 at 600K
+ Reading Eu157 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Eu157.h5
+ Reading Gd152 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Gd152.h5
+ Reading Gd153 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Gd153.h5
+ Reading Gd154 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Gd154.h5
+ Reading Gd155 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Gd155.h5
+ Reading Gd156 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Gd156.h5
+ Reading Gd157 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Gd157.h5
+ Reading Gd158 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Gd158.h5
+ Reading Gd159 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Gd159.h5
+ Reading Gd160 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Gd160.h5
+ Reading Tb158 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Tb158.h5
+ Reading Tb159 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Tb159.h5
+ Reading Tb160 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Tb160.h5
+ Reading Tb161 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Tb161.h5
+ Reading Dy154 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Dy154.h5
+ Reading Dy155 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Dy155.h5
+ Reading Dy156 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Dy156.h5
+ Reading Dy157 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Dy157.h5
+ Reading Dy158 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Dy158.h5
+ Reading Dy159 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Dy159.h5
+ Reading Dy160 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Dy160.h5
+ Reading Dy161 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Dy161.h5
+ Reading Dy162 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Dy162.h5
+ Reading Dy163 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Dy163.h5
+ Reading Dy164 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Dy164.h5
+ Reading Ho165 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ho165.h5
+ Reading Ho166_m1 from
+ /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ho166_m1.h5
+ Reading Er162 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Er162.h5
+ Reading Er163 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Er163.h5
+ Reading Er164 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Er164.h5
+ Reading Er165 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Er165.h5
+ Reading Er166 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Er166.h5
+ Reading Er167 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Er167.h5
+ Reading Er168 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Er168.h5
+ Reading Er169 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Er169.h5
+ Reading Er170 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Er170.h5
+ Reading Tm168 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Tm168.h5
+ Reading Tm169 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Tm169.h5
+ Reading Tm170 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Tm170.h5
+ Reading Tm171 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Tm171.h5
+ Reading Yb168 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Yb168.h5
+ WARNING: Negative value(s) found on probability table for nuclide Yb168 at 20K
+ WARNING: Negative value(s) found on probability table for nuclide Yb168 at 294K
+ WARNING: Negative value(s) found on probability table for nuclide Yb168 at 600K
+ Reading Yb169 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Yb169.h5
+ Reading Yb170 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Yb170.h5
+ WARNING: Negative value(s) found on probability table for nuclide Yb170 at 20K
+ WARNING: Negative value(s) found on probability table for nuclide Yb170 at 294K
+ WARNING: Negative value(s) found on probability table for nuclide Yb170 at 600K
+ Reading Yb171 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Yb171.h5
+ WARNING: Negative value(s) found on probability table for nuclide Yb171 at 20K
+ WARNING: Negative value(s) found on probability table for nuclide Yb171 at 294K
+ WARNING: Negative value(s) found on probability table for nuclide Yb171 at 600K
+ Reading Yb172 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Yb172.h5
+ WARNING: Negative value(s) found on probability table for nuclide Yb172 at 20K
+ WARNING: Negative value(s) found on probability table for nuclide Yb172 at 294K
+ WARNING: Negative value(s) found on probability table for nuclide Yb172 at 600K
+ Reading Yb173 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Yb173.h5
+ WARNING: Negative value(s) found on probability table for nuclide Yb173 at 20K
+ WARNING: Negative value(s) found on probability table for nuclide Yb173 at 294K
+ WARNING: Negative value(s) found on probability table for nuclide Yb173 at 600K
+ Reading Yb174 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Yb174.h5
+ WARNING: Negative value(s) found on probability table for nuclide Yb174 at 20K
+ WARNING: Negative value(s) found on probability table for nuclide Yb174 at 294K
+ WARNING: Negative value(s) found on probability table for nuclide Yb174 at 600K
+ Reading Yb175 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Yb175.h5
+ Reading Yb176 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Yb176.h5
+ WARNING: Negative value(s) found on probability table for nuclide Yb176 at 20K
+ WARNING: Negative value(s) found on probability table for nuclide Yb176 at 294K
+ WARNING: Negative value(s) found on probability table for nuclide Yb176 at 600K
+ Reading Lu175 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Lu175.h5
+ Reading Ra223 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ra223.h5
+ Reading Ra224 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ra224.h5
+ Reading Ra225 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ra225.h5
+ Reading Ra226 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ra226.h5
+ Reading Ac225 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ac225.h5
+ Reading Ac226 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ac226.h5
+ Reading Ac227 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ac227.h5
+ Reading Th227 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Th227.h5
+ Reading Th228 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Th228.h5
+ Reading Th229 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Th229.h5
+ Reading Th230 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Th230.h5
+ Reading Th231 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Th231.h5
+ Reading Th232 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Th232.h5
+ Reading Th233 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Th233.h5
+ Reading Th234 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Th234.h5
+ Reading Pa229 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pa229.h5
+ Reading Pa230 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pa230.h5
+ Reading Pa231 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pa231.h5
+ Reading Pa232 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pa232.h5
+ Reading Pa233 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pa233.h5
+ Reading U230 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U230.h5
+ Reading U231 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U231.h5
+ Reading U232 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U232.h5
+ Reading U233 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U233.h5
+ Reading U234 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U234.h5
+ Reading U236 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U236.h5
+ Reading U237 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U237.h5
+ Reading U239 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U239.h5
+ Reading U240 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U240.h5
+ Reading U241 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U241.h5
+ Reading Np234 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Np234.h5
+ Reading Np235 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Np235.h5
+ Reading Np236 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Np236.h5
+ Reading Np236_m1 from
+ /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Np236_m1.h5
+ Reading Np237 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Np237.h5
+ Reading Np238 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Np238.h5
+ Reading Np239 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Np239.h5
+ Reading Pu236 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu236.h5
+ Reading Pu237 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu237.h5
+ Reading Pu238 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu238.h5
+ Reading Pu239 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu239.h5
+ Reading Pu240 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu240.h5
+ Reading Pu241 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu241.h5
+ Maximum neutron transport energy: 20000000 eV for Na23
+
+ ===============>     FIXED SOURCE TRANSPORT SIMULATION     <===============
+
+ Simulating batch 1
+ Simulating batch 2

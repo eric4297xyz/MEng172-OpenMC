@@ -1,0 +1,45 @@
+Reading depletion results...
+  - 13 depletion steps
+  - 1506 nuclides tracked
+  - Materials: ['1']
+
+Extracting burnup metrics...
+Extracting nuclide inventories...
+
+Generating summary report...
+======================================================================
+DEPLETION SIMULATION SUMMARY
+======================================================================
+
+Simulation Duration: 1.58e+08 seconds (1825.00 days)
+Number of Depletion Steps: 13
+
+Initial k-eff: 1.000000
+Final k-eff: 1.000000
+k-eff Change: +0.000000
+
+Initial Source Rate: 1.0000e+15 n/s
+Final Source Rate: 1.0000e+15 n/s
+
+Cumulative Neutrons: 1.7082e+23
+
+----------------------------------------------------------------------
+KEY NUCLIDE INVENTORIES (Relative Change)
+----------------------------------------------------------------------
+    U238: Initial=0.0000e+00, Final=1.8597e+03, Change=+18596608951067468409864192.0%
+   Pu239: Initial=0.0000e+00, Final=2.4991e+11, Change=+2499086844126298712309709265698816.0%
+   Pu240: Initial=0.0000e+00, Final=2.1284e+10, Change=+212844335539237287107030652289024.0%
+   Pu241: Initial=0.0000e+00, Final=4.2398e+09, Change=+42397643074752659906350205108224.0%
+   Cm244: Initial=0.0000e+00, Final=1.6479e-01, Change=+1647935688302151860224.0%
+   Xe135: Initial=0.0000e+00, Final=1.5848e-02, Change=+158476157467445985280.0%
+   Sm149: Initial=2.6851e+25, Final=7.2083e+24, Change= -73.2%
+
+======================================================================
+
+Saved report: results/depletion_summary.txt
+
+Generating plots...
+Saved plot: results/depletion_metrics.png
+Saved metrics CSV: results/depletion_metrics.csv
+
+✓ Post-processing complete.
