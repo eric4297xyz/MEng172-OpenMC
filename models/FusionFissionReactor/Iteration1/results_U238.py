@@ -14,8 +14,8 @@ MEV_PER_FISSION = 200.0  # Average energy per fission
 MEV_TO_JOULES = 1.60218e-13
 MEV_TO_MJ = MEV_TO_JOULES * 1e-6
 
-RESULTS_FILE = "results/depletion_results.h5"
-OUTPUT_DIR = "results"
+RESULTS_FILE = "results/results_depleted_fuel/depletion_results.h5"
+OUTPUT_DIR = "results/results_U238"
 
 def read_depletion_results(filename):
     """Read depletion results HDF5 file and return key datasets."""
@@ -93,7 +93,7 @@ def extract_nuclide_inventories(data):
     # Flatten to (n_steps, n_nuclides)
     inventory = number_array[:, 0, 0, :]
     
-    # Extract key actinides/fission products
+    # Extract key actinides/fission products (with actual values, not forced zeros)
     key_nuclides = ['U235', 'U238', 'Pu239', 'Pu240', 'Pu241', 'Cm244', 'Xe135', 'Sm149']
     results = {}
     
@@ -101,8 +101,16 @@ def extract_nuclide_inventories(data):
         if nuc in nuclides:
             idx = nuclides.index(nuc)
             results[nuc] = inventory[:, idx]
-        else:
-            results[nuc] = np.zeros(n_steps)
+    
+    # Also include any nuclides with significant initial or final inventory
+    # (helps discover what was actually in the material)
+    for i, nuc in enumerate(nuclides):
+        initial_val = inventory[0, i]
+        final_val = inventory[-1, i]
+        # Include if initial > threshold OR final > threshold
+        if initial_val > 1e20 or final_val > 1e20:
+            if nuc not in results:
+                results[nuc] = inventory[:, i]
     
     return results
 
@@ -137,13 +145,50 @@ def generate_summary_report(data, metrics, inventories):
     report.append(f"Average Power Output: {avg_power:.4e} MW")
     
     report.append("\n" + "-" * 70)
-    report.append("KEY NUCLIDE INVENTORIES (Relative Change)")
+    report.append("KEY NUCLIDE INVENTORIES")
     report.append("-" * 70)
     
+    # Separate nuclides into categories for better readability
+    produced = []  # Initial = 0, Final > 0
+    depleted = []  # Initial > 0, decreased
+    increased = [] # Initial > 0, increased
+    stable = []    # Initial > 0, relatively stable
+    
     for nuc, inv in inventories.items():
-        if np.any(inv > 0):
-            pct_change = 100.0 * (inv[-1] - inv[0]) / (inv[0] + 1e-20)
-            report.append(f"{nuc:>8}: Initial={inv[0]:.4e}, Final={inv[-1]:.4e}, Change={pct_change:+6.1f}%")
+        initial = inv[0]
+        final = inv[-1]
+        
+        if initial < 1e-10:  # Essentially zero initially
+            if final > 1e-10:
+                produced.append((nuc, initial, final))
+        else:  # Non-zero initially
+            rel_change = (final - initial) / initial
+            if rel_change < -0.01:  # Decreased by >1%
+                depleted.append((nuc, initial, final, 100.0 * rel_change))
+            elif rel_change > 0.01:  # Increased by >1%
+                increased.append((nuc, initial, final, 100.0 * rel_change))
+            else:  # Relatively stable (within ±1%)
+                stable.append((nuc, initial, final, 100.0 * rel_change))
+    
+    if produced:
+        report.append("\nProduced during simulation (initially zero):")
+        for nuc, initial, final in sorted(produced, key=lambda x: x[2], reverse=True)[:15]:
+            report.append(f"  {nuc:>12s}: {initial:.4e} → {final:.4e}")
+    
+    if depleted:
+        report.append("\nDepleted (decreased from initial):")
+        for nuc, initial, final, pct in sorted(depleted, key=lambda x: abs(x[3]), reverse=True)[:15]:
+            report.append(f"  {nuc:>12s}: {initial:.4e} → {final:.4e} ({pct:+6.1f}%)")
+    
+    if increased:
+        report.append("\nIncreased from initial:")
+        for nuc, initial, final, pct in sorted(increased, key=lambda x: x[3], reverse=True)[:15]:
+            report.append(f"  {nuc:>12s}: {initial:.4e} → {final:.4e} ({pct:+6.1f}%)")
+    
+    if stable:
+        report.append("\nRelatively stable (±1%):")
+        for nuc, initial, final, pct in sorted(stable, key=lambda x: x[1], reverse=True)[:10]:
+            report.append(f"  {nuc:>12s}: {initial:.4e} → {final:.4e} ({pct:+6.1f}%)")
     
     report.append("\n" + "=" * 70)
     

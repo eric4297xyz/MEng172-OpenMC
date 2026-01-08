@@ -5,9 +5,9 @@ import os
 
 # --- 1. Define materials ---
 fuel = openmc.Material(name="UO2 fuel")
-fuel.add_element('U', 1, enrichment=90)
-#fuel.add_element('O', 2)
-#fuel.add_element('U', 1)
+fuel.add_element('U', 1, enrichment=0.7)  # natural uranium
+fuel.add_element('O', 2)
+fuel.add_element('U', 1)
 fuel.set_density('g/cm3', 10.0)
 
 water = openmc.Material(name="Water")

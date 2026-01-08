@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<settings>
+  <run_mode>eigenvalue</run_mode>
+  <particles>10000</particles>
+  <batches>100</batches>
+  <inactive>20</inactive>
+  <max_lost_particles>1000000</max_lost_particles>
+  <source particle="neutron" strength="1.0" type="independent">
+    <space origin="0.0 0.0 0.0" type="cylindrical">
+      <r parameters="0.0 1.0 1.0" type="powerlaw"/>
+      <phi parameters="0.0 6.283185307179586" type="uniform"/>
+      <z parameters="-2.5 2.5" type="uniform"/>
+    </space>
+    <angle type="isotropic"/>
+    <energy parameters="2300000.0 2500000.0" type="uniform"/>
+  </source>
+  <seed>42</seed>
+</settings>
