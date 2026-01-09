@@ -1,0 +1,80 @@
+======================================================================
+FIXED SOURCE DEPLETION SIMULATION SUMMARY
+======================================================================
+
+Simulation Duration: 1.58e+07 seconds (182.50 days)
+Number of Depletion Steps: 4
+
+Initial k-eff: nan
+Final k-eff: nan
+k-eff Change: +nan
+
+Initial Source Rate: 1.0000e+14 n/s
+Final Source Rate: 1.0000e+14 n/s
+
+Cumulative Neutrons: 2.1024e+21
+
+----------------------------------------------------------------------
+POWER GENERATION
+----------------------------------------------------------------------
+Initial Power: 3.2044e-03 MW (3.2044e+03 W)
+Final Power: 3.2044e-03 MW (3.2044e+03 W)
+Total Energy Generated: 1.8713e+01 MWh
+                        6.7368e+10 Joules
+Average Power Output: 3.2044e-03 MW
+
+----------------------------------------------------------------------
+KEY NUCLIDE INVENTORIES (Total Atoms)
+----------------------------------------------------------------------
+Material Volume: 3.6652e+06 cm³
+
+Key Actinides:
+          U235: 0.0000e+00 → 0.0000e+00 atoms (produced)
+          U238: 0.0000e+00 → 1.6403e-15 atoms (produced)
+         Pu238: 0.0000e+00 → 3.2693e+01 atoms (produced)
+         Pu239: 0.0000e+00 → 3.2493e+00 atoms (produced)
+         Pu240: 0.0000e+00 → 1.9797e-01 atoms (produced)
+         Pu241: 0.0000e+00 → 2.1023e-02 atoms (produced)
+         Pu242: 0.0000e+00 → 4.6473e-04 atoms (produced)
+         Am241: 0.0000e+00 → 1.4283e+25 atoms (produced)
+         Am243: 0.0000e+00 → 6.8297e+26 atoms (produced)
+         Cm244: 0.0000e+00 → 1.2812e-02 atoms (produced)
+         Np237: 0.0000e+00 → 4.1634e+33 atoms (produced)
+         Sm151: 0.0000e+00 → 3.7755e+15 atoms (produced)
+         Cs137: 0.0000e+00 → 5.3781e-06 atoms (produced)
+
+Produced during simulation (initially zero):
+         Ac226: 0.0000e+00 → 1.0872e+36 atoms
+      Ag105_m1: 0.0000e+00 → 4.4318e+35 atoms
+         Ag109: 0.0000e+00 → 2.0064e+35 atoms
+         Np237: 0.0000e+00 → 4.1634e+33 atoms
+         Ac224: 0.0000e+00 → 1.1559e+33 atoms
+           N16: 0.0000e+00 → 2.7968e+32 atoms
+         Pd113: 0.0000e+00 → 5.5954e+31 atoms
+         Th235: 0.0000e+00 → 3.9269e+31 atoms
+          As73: 0.0000e+00 → 2.2337e+31 atoms
+         Np239: 0.0000e+00 → 1.5945e+31 atoms
+      Te127_m1: 0.0000e+00 → 1.5536e+31 atoms
+         Pm154: 0.0000e+00 → 4.7360e+30 atoms
+         Th226: 0.0000e+00 → 4.5954e+30 atoms
+          Sc47: 0.0000e+00 → 3.6384e+30 atoms
+          Al29: 0.0000e+00 → 2.9020e+30 atoms
+
+Depleted (decreased from initial):
+          As84: 1.3435e+31 → 2.9572e-04 atoms (-100.0%)
+           C12: 1.3435e+31 → 6.1475e-76 atoms (-100.0%)
+          I126: 8.1688e+32 → 3.5286e+14 atoms (-100.0%)
+      In111_m1: 8.9655e+32 → 3.3252e+15 atoms (-100.0%)
+           K44: 4.6622e+32 → 1.0153e+14 atoms (-100.0%)
+          Mg28: 8.1588e+31 → 2.2161e+15 atoms (-100.0%)
+       Se83_m1: 6.2562e+32 → 1.1178e+13 atoms (-100.0%)
+         Sn118: 6.3259e+31 → 5.0647e+10 atoms (-100.0%)
+      Sn119_m1: 1.8548e+30 → 1.6556e+13 atoms (-100.0%)
+         Sn120: 2.1837e+32 → 3.8104e+15 atoms (-100.0%)
+          Sr96: 7.3384e+28 → 2.4603e+12 atoms (-100.0%)
+        Y93_m1: 1.1699e+27 → 4.7444e-14 atoms (-100.0%)
+           Y94: 6.1436e+31 → 5.1347e-06 atoms (-100.0%)
+           Y95: 3.3520e+33 → 1.6347e-01 atoms (-100.0%)
+        Y96_m1: 2.0211e+33 → 1.3592e-01 atoms (-100.0%)
+
+======================================================================

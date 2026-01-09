@@ -23,7 +23,7 @@ def build_spentfuelsphere_albox(box_side, box_width,  sphere_inner_radius, spher
     #spent_fuel
     mspentfuel = openmc.Material(1,'spent UO2')
     mspentfuel.set_density('atom/b-cm',7.133315757E-02)
-    #mspentfuel.temperature = T #Temperature can be assigned if we have an idea 
+    mspentfuel.temperature = 300 #Temperature can be assigned if we have an idea 
     mspentfuel.add_nuclide('O16',6.7187968E-01)
     mspentfuel.add_nuclide('U238',3.0769658E-01)
     mspentfuel.add_nuclide('U235',3.4979859E-03)
@@ -75,13 +75,6 @@ def build_spentfuelsphere_albox(box_side, box_width,  sphere_inner_radius, spher
     mspentfuel.add_nuclide('Cm246',1.9481932E-07)
     mspentfuel.add_nuclide('U237',1.7067631E-07)
     mspentfuel.add_nuclide('Xe133',9.3481328E-08)
-    mspentfuel.add_nuclide('Gd155',7.6579955E-08)
-    mspentfuel.add_nuclide('I133',7.5534463E-08)
-    mspentfuel.add_nuclide('Eu152',4.5260253E-08)
-    mspentfuel.add_nuclide('Pu244',9.4590026E-09)
-    mspentfuel.add_nuclide('Np239',3.2856837E-09)
-    mspentfuel.add_nuclide('U233',1.2208878E-09)
-    mspentfuel.add_nuclide('Mo99',1.1472054E-09)
     mspentfuel.add_nuclide('Gd155',7.6579955E-08)
     mspentfuel.add_nuclide('I133',7.5534463E-08)
     mspentfuel.add_nuclide('Eu152',4.5260253E-08)

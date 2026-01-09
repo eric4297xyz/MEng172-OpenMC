@@ -1,5 +1,5 @@
-# FILE: reactor_U_Eigenvalue.py
-# Eigenvalue depletion simulation (explicit k-eff tracking)
+# FILE: reactor_Depleted_FixedSource_2.py
+# Fixed source depletion simulation
 
 import openmc
 import openmc.deplete
@@ -23,9 +23,9 @@ cyl_H = 5.0
 cyl_R = 1.0
 E_min, E_max = 2.3e6, 2.5e6
 u238_sphere_radius = 25.5
+source_rate = 1e14  # neutrons per second
 particles_per_batch = 1000
 num_batches = 20
-num_inactive = 5
 CHAIN_FILE = "models/FusionFissionReactor/Iteration2/chain_endfb80_pwr.xml"
 days_per_year = 365.0
 hours_per_day = 24.0
@@ -47,6 +47,10 @@ my_source = create_cylindrical_source(
     e_min=E_min,
     e_max=E_max
 )
+# Set source strength to 1e14 neutrons/second
+my_source.strength = source_rate
+print(f"Source rate set to {source_rate:.2e} neutrons/second")
+
 (my_geometry, my_materials) = build_spentfuelsphere_albox(
     box_side=20.0,
     box_width=20.0,
@@ -55,10 +59,9 @@ my_source = create_cylindrical_source(
 )
 
 settings = openmc.Settings()
-settings.run_mode  = 'eigenvalue'  # <-- Explicit eigenvalue mode
+settings.run_mode  = 'fixed source'  # <-- Fixed source mode
 settings.particles = particles_per_batch
 settings.batches   = num_batches
-settings.inactive  = num_inactive
 settings.seed      = 42
 settings.source    = my_source
 settings.max_lost_particles = 1000000
@@ -94,7 +97,7 @@ operator = openmc.deplete.CoupledOperator(
     chain_file=CHAIN_FILE,
     reduce_chain=True,
     reduce_chain_level=5,
-    normalization_mode="energy-deposition"  # Use energy-deposition for eigenvalue mode
+    normalization_mode="source-rate"  # Use source-rate for fixed source mode
 )
 
 burnable_mats = []
@@ -107,22 +110,24 @@ else:
     print("Warning: no burnable materials detected; operator.burnable_mats left empty")
 
 # Set output directory
-output_dir = "results/iteration2_results_depleted_fuel"
+output_dir = "results/iteration2_results_depleted_fuel_fixedsource"
 os.makedirs(output_dir, exist_ok=True)
 
 # Save current directory and change to output directory for depletion run
 original_dir = os.getcwd()
 os.chdir(output_dir)
 
-power_list = [1e6] * len(timesteps_in_seconds)  # 1 MW per step
+# For fixed source mode with source-rate normalization, use source_rate parameter
+source_rate_list = [source_rate] * len(timesteps_in_seconds)  # neutrons/s per step
 integrator = openmc.deplete.PredictorIntegrator(
     operator=operator,
     timesteps=timesteps_in_seconds,
-    power=power_list,
+    source_rates=source_rate_list,  # Use source_rates instead of power
     timestep_units='s'
 )
 
-print(f"Running depletion for {time_seconds} seconds in eigenvalue mode...")
+print(f"Running depletion for {time_seconds} seconds in fixed source mode...")
+print(f"Source rate: {source_rate:.2e} neutrons/second")
 print(f"Output will be saved to: {os.path.join(original_dir, output_dir)}/")
 integrator.integrate()
 
