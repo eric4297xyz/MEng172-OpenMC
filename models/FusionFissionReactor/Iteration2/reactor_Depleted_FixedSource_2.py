@@ -21,12 +21,12 @@ from neutronsource import create_cylindrical_source
 # -------------------- Simulation Parameters --------------------
 cyl_H = 5.0
 cyl_R = 1.0
-E_min, E_max = 2.3e6, 2.5e6
+E_min, E_max = 14.1e6, 14.1e6  # D-T fusion neutron energy
 u238_sphere_radius = 25.5
 source_rate = 1e14  # neutrons per second
 particles_per_batch = 1000
 num_batches = 20
-CHAIN_FILE = "models/FusionFissionReactor/Iteration2/chain_endfb80_pwr.xml"
+CHAIN_FILE = "chain_endfb80_pwr.xml"
 days_per_year = 365.0
 hours_per_day = 24.0
 seconds_per_hour = 3600.0
@@ -39,6 +39,15 @@ timesteps_in_seconds = [step_size] * num_steps
 
 # Start timer
 start_time = time.time()
+
+print("="*70)
+print("ITERATION 2C: SPENT FUEL (14.1 MeV D-T FUSION NEUTRONS)")
+print("="*70)
+print("\nTesting spent fuel blanket with HIGH ENERGY fusion neutrons:")
+print("  - 14.1 MeV monoenergetic source (D-T fusion)")
+print("  - Same spent fuel composition as Iteration2")
+print("  - Tests fast neutron transmutation vs thermal spectrum")
+print("")
 
 print("Building model...")
 my_source = create_cylindrical_source(
@@ -95,8 +104,7 @@ print("Setting up depletion operator...")
 operator = openmc.deplete.CoupledOperator(
     model=model,
     chain_file=CHAIN_FILE,
-    reduce_chain=True,
-    reduce_chain_level=5,
+    reduce_chain=False,  # FIX: Changed to False - reduce_chain=True was causing zero uranium initialization
     normalization_mode="source-rate"  # Use source-rate for fixed source mode
 )
 
@@ -110,7 +118,7 @@ else:
     print("Warning: no burnable materials detected; operator.burnable_mats left empty")
 
 # Set output directory
-output_dir = "results/iteration2_results_depleted_fuel_fixedsource"
+output_dir = "results/iteration2_results_depleted_fuel_14MeV"
 os.makedirs(output_dir, exist_ok=True)
 
 # Save current directory and change to output directory for depletion run

@@ -89,12 +89,12 @@ def build_spentfuelsphere_albox(box_side, box_width,  sphere_inner_radius, spher
     aluminum.set_density('g/cm3', 2.7)
     #aluminum.temperature = T to be figured out 
     
-    #Na coolant 
-    Na = openmc.Material()
-    Na.add_nuclide('Na23',1)
-    Na.set_density('g/cm3', 0.856)
+    # Na coolant - REMOVED FOR NO-SODIUM VERSION
+    # Na = openmc.Material()
+    # Na.add_nuclide('Na23',1)
+    # Na.set_density('g/cm3', 0.856)
 
-    materials = openmc.Materials([aluminum, mspentfuel, Na])
+    materials = openmc.Materials([aluminum, mspentfuel])  # Removed Na
 
     # 2) Geometry
     Al_box_inner_wall = openmc.model.RectangularParallelepiped(-box_side/2, box_side/2, -box_side/2, box_side/2, -box_side/2, box_side/2, boundary_type='transmission')
@@ -114,7 +114,7 @@ def build_spentfuelsphere_albox(box_side, box_width,  sphere_inner_radius, spher
     
     outer_box_coolant_cell = openmc.Cell()
     outer_box_coolant_cell.region = +Al_box_outer_wall & -inner_surface_sphere
-    outer_box_coolant_cell.fill = Na
+    outer_box_coolant_cell.fill = None  # Vacuum instead of Na coolant
     
     spent_fuel_sphere_cell = openmc.Cell()
     spent_fuel_sphere_cell.region= +inner_surface_sphere & -outer_surface_spheree

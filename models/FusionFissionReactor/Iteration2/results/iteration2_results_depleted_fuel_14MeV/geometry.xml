@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<geometry>
+  <cell id="1" material="void" name="inner_Al_vacuum" region="-2 1 -4 3 -6 5" universe="1"/>
+  <cell id="2" material="2" region="(2 | -1 | 4 | -3 | 6 | -5) (-8 7 -10 9 -12 11)" universe="1"/>
+  <cell id="3" material="void" region="(8 | -7 | 10 | -9 | 12 | -11) -13" universe="1"/>
+  <cell id="4" material="1" region="13 -14" universe="1" volume="3665191.429188092"/>
+  <surface coeffs="-10.0" id="1" type="x-plane"/>
+  <surface coeffs="10.0" id="2" type="x-plane"/>
+  <surface coeffs="-10.0" id="3" type="y-plane"/>
+  <surface coeffs="10.0" id="4" type="y-plane"/>
+  <surface coeffs="-10.0" id="5" type="z-plane"/>
+  <surface coeffs="10.0" id="6" type="z-plane"/>
+  <surface coeffs="-20.0" id="7" type="x-plane"/>
+  <surface coeffs="20.0" id="8" type="x-plane"/>
+  <surface coeffs="-20.0" id="9" type="y-plane"/>
+  <surface coeffs="20.0" id="10" type="y-plane"/>
+  <surface coeffs="-20.0" id="11" type="z-plane"/>
+  <surface coeffs="20.0" id="12" type="z-plane"/>
+  <surface coeffs="0.0 0.0 0.0 50.0" id="13" type="sphere"/>
+  <surface boundary="vacuum" coeffs="0.0 0.0 0.0 100.0" id="14" type="sphere"/>
+</geometry>

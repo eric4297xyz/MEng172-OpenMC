@@ -2,7 +2,7 @@
 <geometry>
   <cell id="1" material="void" name="inner_Al_vacuum" region="-2 1 -4 3 -6 5" universe="1"/>
   <cell id="2" material="2" region="(2 | -1 | 4 | -3 | 6 | -5) (-8 7 -10 9 -12 11)" universe="1"/>
-  <cell id="3" material="3" region="(8 | -7 | 10 | -9 | 12 | -11) -13" universe="1"/>
+  <cell id="3" material="void" region="(8 | -7 | 10 | -9 | 12 | -11) -13" universe="1"/>
   <cell id="4" material="1" region="13 -14" universe="1" volume="3665191.429188092"/>
   <surface coeffs="-10.0" id="1" type="x-plane"/>
   <surface coeffs="10.0" id="2" type="x-plane"/>
