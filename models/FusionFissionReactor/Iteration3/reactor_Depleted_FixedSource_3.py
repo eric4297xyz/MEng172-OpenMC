@@ -78,8 +78,8 @@ settings.source    = my_source
 settings.max_lost_particles = 1000000
 
 print("Creating 3D heating tally...")
-mesh_bounds = [-50.0, -50.0, -50.0, 50.0, 50.0, 50.0]
-mesh_dim = (20, 20, 20)
+mesh_bounds = [-110.0, -110.0, -110.0, 110.0, 110.0, 110.0]  # Extended to fully cover fuel sphere (r=100)
+mesh_dim = (22, 22, 22)  # Increased resolution to maintain ~10cm bins
 mesh = openmc.RegularMesh()
 mesh.dimension = mesh_dim
 mesh.lower_left = mesh_bounds[0:3]
