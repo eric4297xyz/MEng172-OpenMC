@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<materials>
+  <material id="1" name="spent UO2" depletable="true" volume="3665191.429188092" temperature="300">
+    <density value="0.07133311490513482" units="atom/b-cm"/>
+    <nuclide name="O16" ao="0.04792727690589592"/>
+    <nuclide name="U238" ao="0.02194895846925621"/>
+    <nuclide name="U235" ao="0.00024951775614644054"/>
+    <nuclide name="U236" ao="0.00015045342240545793"/>
+    <nuclide name="U234" ao="4.573306999428734e-06"/>
+    <nuclide name="U237" ao="1.2174874481464497e-08"/>
+    <nuclide name="Pu239" ao="0.0001834526136327297"/>
+    <nuclide name="Pu240" ao="7.28678567396565e-05"/>
+    <nuclide name="Pu241" ao="4.7803397890528606e-05"/>
+    <nuclide name="Pu242" ao="1.900669320696935e-05"/>
+    <nuclide name="Pu238" ao="9.345464642220115e-06"/>
+    <nuclide name="Np237" ao="1.989077455288623e-05"/>
+    <nuclide name="Am243" ao="5.609556523332544e-06"/>
+    <nuclide name="Am241" ao="2.2310006085921455e-06"/>
+    <nuclide name="Cm244" ao="2.3468972480673193e-06"/>
+    <nuclide name="Cm242" ao="5.252720057675969e-07"/>
+    <nuclide name="Cm245" ao="1.3953150070367786e-07"/>
+    <nuclide name="Cm243" ao="2.1995173773999154e-08"/>
+    <nuclide name="Cm246" ao="1.389707082116004e-08"/>
+    <nuclide name="Cs137" ao="7.497629270228856e-05"/>
+    <nuclide name="Cs133" ao="6.988023573677772e-05"/>
+    <nuclide name="Tc99" ao="6.673893679033057e-05"/>
+    <nuclide name="Ru101" ao="6.562085568925432e-05"/>
+    <nuclide name="Zr93" ao="6.364267686540228e-05"/>
+    <nuclide name="Mo95" ao="6.0808426360324946e-05"/>
+    <nuclide name="Sr90" ao="4.849068447031989e-05"/>
+    <nuclide name="Nd143" ao="4.6571155741484926e-05"/>
+    <nuclide name="Nd145" ao="3.805239564643812e-05"/>
+    <nuclide name="Rh103" ao="3.4705096622885705e-05"/>
+    <nuclide name="Cs135" ao="3.462908903866834e-05"/>
+    <nuclide name="Pd107" ao="1.8504651389614602e-05"/>
+    <nuclide name="Sm150" ao="1.6255450205622906e-05"/>
+    <nuclide name="I129" ao="1.0251914629337976e-05"/>
+    <nuclide name="Pm147" ao="7.32583984633355e-06"/>
+    <nuclide name="Eu153" ao="6.625391220317195e-06"/>
+    <nuclide name="Sm152" ao="6.322564201925999e-06"/>
+    <nuclide name="Ag109" ao="6.0734419670251616e-06"/>
+    <nuclide name="Sm147" ao="4.709020194907339e-06"/>
+    <nuclide name="Ru103" ao="1.3810391088176555e-06"/>
+    <nuclide name="Sn126" ao="1.2853143356393716e-06"/>
+    <nuclide name="Nb95" ao="1.0575020870378534e-06"/>
+    <nuclide name="Cl36" ao="1.0000890510669998e-06"/>
+    <nuclide name="Ca41" ao="1.000088694401377e-06"/>
+    <nuclide name="Ni59" ao="1.0000884804020034e-06"/>
+    <nuclide name="Sm151" ao="9.711466344386378e-07"/>
+    <nuclide name="Se79" ao="5.058650445654143e-07"/>
+    <nuclide name="Eu155" ao="3.404692585580257e-07"/>
+    <nuclide name="Pr143" ao="1.4666902894780443e-07"/>
+    <nuclide name="Sm149" ao="1.3807231744089587e-07"/>
+    <nuclide name="Nd147" ao="3.6588532217353446e-08"/>
+    <nuclide name="Xe133" ao="6.6683152146927254e-09"/>
+    <nuclide name="Gd155" ao="5.462687469170146e-09"/>
+    <nuclide name="I133" ao="5.388109258102804e-09"/>
+    <nuclide name="Eu152" ao="3.2285552650764883e-09"/>
+    <nuclide name="Mo99" ao="1.1920081818364646e-10"/>
+  </material>
+  <material id="2">
+    <density value="0.856" units="g/cm3"/>
+    <nuclide name="Na23" ao="1"/>
+  </material>
+</materials>

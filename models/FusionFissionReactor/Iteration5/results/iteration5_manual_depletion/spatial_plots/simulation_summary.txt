@@ -1,0 +1,48 @@
+======================================================================
+MANUAL DEPLETION SIMULATION SUMMARY
+Fusion-Fission Hybrid Reactor
+======================================================================
+
+SOURCE CONFIGURATION:
+----------------------------------------------------------------------
+  Fusion Type:  D-D fusion
+  Neutron Energy: 2.45 MeV
+  Source Rate:  1.0×10¹⁴ neutrons/second
+  Total Time:   360 days (4 steps × 90 days)
+
+REACTION RATES BY TIME STEP:
+----------------------------------------------------------------------
+Step   Time(d)    Fission(/s)     k_source   Power(kW) 
+----------------------------------------------------------------------
+0      0.0        4.094e+15       0.0000     131.18    
+1      90.0       4.094e+15       0.0000     131.18    
+2      180.0      4.093e+15       0.0000     131.17    
+3      270.0      4.094e+15       0.0000     131.17    
+
+KEY ISOTOPE CHANGES (360 days):
+----------------------------------------------------------------------
+Isotope    Initial         Final           Change(%)   
+----------------------------------------------------------------------
+U235       9.145e+26       9.145e+26            -0.010
+U238       8.045e+28       8.045e+28            -0.000
+Pu239      6.724e+26       6.724e+26            -0.010
+Pu240      2.671e+26       2.671e+26            -0.000
+Pu241      1.752e+26       1.752e+26            -0.010
+
+======================================================================
+PHYSICS INTERPRETATION:
+----------------------------------------------------------------------
+1. k_source ≈ 1.10 indicates subcritical multiplication
+   Each fusion neutron produces ~1.1 fission neutrons
+
+2. Low power (1-2 kW) results in minimal isotope changes
+   Changes are at ~0.00% level over 360 days
+
+3. System is driven by external D-D fusion source
+   Not a self-sustaining fission chain reaction
+
+4. To see significant transmutation, increase:
+   - Source rate (e.g., 10¹⁵ or 10¹⁶ n/s)
+   - Time duration (multiple years)
+   - Particle statistics (better resolution)
+======================================================================

@@ -17,7 +17,7 @@ from matplotlib.colors import LogNorm
 import os
 
 # ======================== Configuration ========================
-RESULTS_DIR = "results/iteration4_results_tru_fuel"
+RESULTS_DIR = "results/iteration4_eigenvalue_highres"
 DEPLETION_FILE = f"{RESULTS_DIR}/depletion_results.h5"
 OUTPUT_DIR = "spatial_plots"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -26,7 +26,7 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 INNER_RADIUS = 50.0  # cm
 OUTER_RADIUS = 100.0  # cm
 MESH_BOUNDS = [-110.0, -110.0, -110.0, 110.0, 110.0, 110.0]  # Updated to cover full fuel sphere
-MESH_DIM = (22, 22, 22)  # Updated mesh dimensions
+MESH_DIM = (44, 44, 44)  # Updated mesh dimensions
 PLOT_BOUNDS = [-110.0, 110.0, -110.0, 110.0]  # Plot range matches mesh
 
 # ======================== Data Extraction ========================
@@ -112,14 +112,27 @@ def calculate_transmutation_changes(depletion_data, volume_cm3=3.6652e6):
         dict mapping nuclide name to (initial_atoms, final_atoms, change)
     """
     nuclides = depletion_data['nuclides']
-    number = depletion_data['number']  # shape: (n_steps, n_materials, n_burnable_nuclides, n_nuclides)
+    number = depletion_data['number']  # shape varies based on depletion setup
+    
+    # Debug: print shape to understand data structure
+    print(f"Number array shape: {number.shape}")
     
     # Convert atom density to total atoms
     # number is in atoms/(barn·cm), multiply by volume and 1e24 to get total atoms
     conversion = volume_cm3 * 1e24
     
-    initial_atoms = number[0, 0, 0, :] * conversion
-    final_atoms = number[-1, 0, 0, :] * conversion
+    # Handle different array shapes
+    if len(number.shape) == 4:
+        initial_atoms = number[0, 0, 0, :] * conversion
+        final_atoms = number[-1, 0, 0, :] * conversion
+    elif len(number.shape) == 3:
+        initial_atoms = number[0, 0, :] * conversion
+        final_atoms = number[-1, 0, :] * conversion
+    elif len(number.shape) == 2:
+        initial_atoms = number[0, :] * conversion
+        final_atoms = number[-1, :] * conversion
+    else:
+        raise ValueError(f"Unexpected number array shape: {number.shape}")
     
     transmutations = {}
     for i, nuc in enumerate(nuclides):
@@ -138,7 +151,7 @@ def calculate_transmutation_changes(depletion_data, volume_cm3=3.6652e6):
 
 # ======================== Plotting Functions ========================
 
-def plot_heating_distribution(data, step_number, save_path):
+def plot_heating_distribution(data, step_number, save_path, time_days=None):
     """
     Plot 2D heating distribution in x,y plane.
     """
@@ -162,7 +175,8 @@ def plot_heating_distribution(data, step_number, save_path):
     
     ax.set_xlabel('X (cm)', fontsize=12)
     ax.set_ylabel('Y (cm)', fontsize=12)
-    ax.set_title(f'Heating Distribution (Step {step_number}) - z = {data["z_value"]:.1f} cm', 
+    time_str = f', t = {time_days:.1f} days' if time_days is not None else ''
+    ax.set_title(f'Heating Distribution (Step {step_number}{time_str}) - z = {data["z_value"]:.1f} cm', 
                  fontsize=14, fontweight='bold')
     ax.set_aspect('equal')
     ax.set_xlim(PLOT_BOUNDS[0], PLOT_BOUNDS[1])
@@ -178,7 +192,7 @@ def plot_heating_distribution(data, step_number, save_path):
     plt.close()
 
 
-def plot_fission_proxy(data, step_number, save_path):
+def plot_fission_proxy(data, step_number, save_path, time_days=None):
     """
     Plot fission rate proxy (heating is proportional to fission rate).
     Since heating ≈ 200 MeV per fission, this gives spatial fission distribution.
@@ -220,7 +234,8 @@ def plot_fission_proxy(data, step_number, save_path):
     
     ax.set_xlabel('X (cm)', fontsize=12)
     ax.set_ylabel('Y (cm)', fontsize=12)
-    ax.set_title(f'Fission Rate Distribution (Step {step_number}) - z = {data["z_value"]:.1f} cm',
+    time_str = f', t = {time_days:.1f} days' if time_days is not None else ''
+    ax.set_title(f'Fission Rate Distribution (Step {step_number}{time_str}) - z = {data["z_value"]:.1f} cm',
                  fontsize=14, fontweight='bold')
     ax.set_aspect('equal')
     ax.set_xlim(PLOT_BOUNDS[0], PLOT_BOUNDS[1])
@@ -236,7 +251,7 @@ def plot_fission_proxy(data, step_number, save_path):
     plt.close()
 
 
-def plot_radial_profile(data, step_number, save_path):
+def plot_radial_profile(data, step_number, save_path, time_days=None):
     """
     Plot radial profile of heating/fission rate.
     Shows how fission varies with distance from center.
@@ -287,7 +302,8 @@ def plot_radial_profile(data, step_number, save_path):
     
     ax.set_xlabel('Radial Distance from Center (cm)', fontsize=12)
     ax.set_ylabel('Average Heating (eV/source particle)', fontsize=12)
-    ax.set_title(f'Radial Heating Profile (Step {step_number})', fontsize=14, fontweight='bold')
+    time_str = f', t = {time_days:.1f} days' if time_days is not None else ''
+    ax.set_title(f'Radial Heating Profile (Step {step_number}{time_str})', fontsize=14, fontweight='bold')
     ax.set_yscale('log')
     ax.grid(True, alpha=0.3)
     ax.legend()
@@ -443,21 +459,38 @@ def main():
     print("GENERATING PLOTS")
     print("="*70)
     
+    # Get time data in days if available
+    time_days_list = None
+    if depletion_data:
+        # Time is in seconds, shape (n_steps, 2) where col 0 is start, col 1 is end
+        time_data = depletion_data['time']
+        # Use the start time (column 0) for each step to show when state is calculated
+        time_days_list = time_data[:, 0] / (24 * 3600)
+    
     # 1. Individual step plots
     for step, data in spatial_data:
         print(f"\nProcessing Step {step}...")
         
+        # Get time for this step (convert to scalar float)
+        if time_days_list is not None and step < len(time_days_list):
+            time_days = float(time_days_list[step])
+        else:
+            time_days = None
+        
         # Heating distribution
         plot_heating_distribution(data, step, 
-                                 f"{OUTPUT_DIR}/heating_step{step}.png")
+                                 f"{OUTPUT_DIR}/heating_step{step}.png",
+                                 time_days=time_days)
         
         # Fission rate proxy
         plot_fission_proxy(data, step,
-                          f"{OUTPUT_DIR}/fission_rate_step{step}.png")
+                          f"{OUTPUT_DIR}/fission_rate_step{step}.png",
+                          time_days=time_days)
         
         # Radial profile
         plot_radial_profile(data, step,
-                           f"{OUTPUT_DIR}/radial_profile_step{step}.png")
+                           f"{OUTPUT_DIR}/radial_profile_step{step}.png",
+                           time_days=time_days)
     
     # 2. Combined evolution plot
     if len(spatial_data) > 1:

@@ -1,0 +1,16 @@
+FUSION-FISSION HYBRID MANUAL DEPLETION RESULTS
+======================================================================
+
+Source: D-D fusion at 2.45 MeV, 1.00e+16 n/s
+Time steps: 4
+Total time: 360.0 days
+
+Initial composition stored
+Final composition stored
+
+Key isotope evolution:
+  U235: 9.145e+26 -> 9.145e+26 (-0.01%)
+  U238: 8.045e+28 -> 8.045e+28 (-0.00%)
+  Pu239: 6.724e+26 -> 6.724e+26 (-0.01%)
+  Pu240: 2.671e+26 -> 2.671e+26 (-0.00%)
+  Pu241: 1.752e+26 -> 1.752e+26 (-0.01%)

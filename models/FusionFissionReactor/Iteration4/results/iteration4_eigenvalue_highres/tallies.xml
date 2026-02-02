@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<tallies>
+  <mesh id="1">
+    <dimension>44 44 44</dimension>
+    <lower_left>-110.0 -110.0 -110.0</lower_left>
+    <upper_right>110.0 110.0 110.0</upper_right>
+  </mesh>
+  <filter id="1" type="mesh">
+    <bins>1</bins>
+  </filter>
+  <filter id="2" type="material">
+    <bins>1 2</bins>
+  </filter>
+  <tally id="1" name="3d_heating_tally">
+    <filters>1</filters>
+    <scores>heating</scores>
+  </tally>
+  <tally id="2" name="flux_tally">
+    <filters>2</filters>
+    <scores>flux</scores>
+  </tally>
+</tallies>

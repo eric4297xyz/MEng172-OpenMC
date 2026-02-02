@@ -1,0 +1,101 @@
+======================================================================
+ITERATION 4: EIGENVALUE DEPLETION RESULTS
+======================================================================
+
+k-effective Evolution:
+  Day   0.0: k-eff = 0.51550 ± 0.00091
+  Day  10.0: k-eff = 0.51394 ± 0.00084
+  Day  20.0: k-eff = 0.51429 ± 0.00064
+  Day  30.0: k-eff = 0.51540 ± 0.00095
+
+Δk over 30 days: -0.00010
+
+======================================================================
+KEY ISOTOPE EVOLUTION (atoms)
+======================================================================
+
+U234:
+  Day   0.0: 1.1957e+24 atoms
+  Day  10.0: 1.1962e+24 atoms
+  Day  20.0: 1.1967e+24 atoms
+  Day  30.0: 1.1973e+24 atoms
+  Change: +1.5814e+21 atoms (+0.13%)
+
+U235:
+  Day   0.0: 6.5238e+25 atoms
+  Day  10.0: 6.5237e+25 atoms
+  Day  20.0: 6.5236e+25 atoms
+  Day  30.0: 6.5236e+25 atoms
+  Change: -1.8893e+21 atoms (-0.00%)
+
+U236:
+  Day   0.0: 3.9336e+25 atoms
+  Day  10.0: 3.9336e+25 atoms
+  Day  20.0: 3.9336e+25 atoms
+  Day  30.0: 3.9336e+25 atoms
+  Change: +4.3484e+20 atoms (+0.00%)
+
+U238:
+  Day   0.0: 5.7386e+27 atoms
+  Day  10.0: 5.7385e+27 atoms
+  Day  20.0: 5.7385e+27 atoms
+  Day  30.0: 5.7385e+27 atoms
+  Change: -1.2570e+22 atoms (-0.00%)
+
+Pu238:
+  Day   0.0: 2.4434e+24 atoms
+  Day  10.0: 2.4486e+24 atoms
+  Day  20.0: 2.4535e+24 atoms
+  Day  30.0: 2.4583e+24 atoms
+  Change: +1.4920e+22 atoms (+0.61%)
+
+Pu239:
+  Day   0.0: 4.7965e+25 atoms
+  Day  10.0: 4.7968e+25 atoms
+  Day  20.0: 4.7974e+25 atoms
+  Day  30.0: 4.7979e+25 atoms
+  Change: +1.4515e+22 atoms (+0.03%)
+
+Pu240:
+  Day   0.0: 1.9051e+25 atoms
+  Day  10.0: 1.9052e+25 atoms
+  Day  20.0: 1.9053e+25 atoms
+  Day  30.0: 1.9053e+25 atoms
+  Change: +1.9358e+21 atoms (+0.01%)
+
+Pu241:
+  Day   0.0: 1.2498e+25 atoms
+  Day  10.0: 1.2482e+25 atoms
+  Day  20.0: 1.2465e+25 atoms
+  Day  30.0: 1.2448e+25 atoms
+  Change: -5.0008e+22 atoms (-0.40%)
+
+Pu242:
+  Day   0.0: 4.9693e+24 atoms
+  Day  10.0: 4.9693e+24 atoms
+  Day  20.0: 4.9693e+24 atoms
+  Day  30.0: 4.9693e+24 atoms
+  Change: +4.1595e+19 atoms (+0.00%)
+
+Np237:
+  Day   0.0: 5.2004e+24 atoms
+  Day  10.0: 5.2025e+24 atoms
+  Day  20.0: 5.2033e+24 atoms
+  Day  30.0: 5.2037e+24 atoms
+  Change: +3.2282e+21 atoms (+0.06%)
+
+Am241:
+  Day   0.0: 5.8329e+23 atoms
+  Day  10.0: 5.9985e+23 atoms
+  Day  20.0: 6.1638e+23 atoms
+  Day  30.0: 6.3289e+23 atoms
+  Change: +4.9597e+22 atoms (+8.50%)
+
+======================================================================
+SUMMARY
+======================================================================
+✓ System is subcritical (k-eff ~ 0.515)
+✓ Minimal reactivity change over 30 days
+✓ Results are physically realistic
+✓ Ready for higher resolution run if desired
+======================================================================

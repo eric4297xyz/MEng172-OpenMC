@@ -1,0 +1,32 @@
+======================================================================
+FUSION-FISSION HYBRID: MANUAL DEPLETION
+======================================================================
+
+This simulation properly handles:
+  - External D-D fusion source: 2.45 MeV @ 1e14 n/s
+  - Fission multiplication in subcritical fuel
+  - Accurate reaction rate normalization
+
+Depletion: 1 steps × 90 days = 90 days
+======================================================================
+
+Building geometry...
+Geometry: Fuel shell (r=50-100 cm) with inner Na coolant
+Burnable material: spent UO2 (ID=1)
+Initial volume: 3.6652e+06 cm³
+
+Creating D-D fusion point source...
+
+Transport settings:
+  Particles per batch: 5,000
+  Active batches: 20
+  Total active particles: 100,000
+
+Setting up reaction rate tallies...
+
+Material contains 55 nuclides
+Traceback (most recent call last):
+  File "/workspaces/MEng172-OpenMC/models/FusionFissionReactor/Iteration5/hybrid_depletion_manual.py", line 154, in <module>
+    nuclide_filter = openmc.NuclideFilter(material_nuclides)
+                     ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'openmc' has no attribute 'NuclideFilter'

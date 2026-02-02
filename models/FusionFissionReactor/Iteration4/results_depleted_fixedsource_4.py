@@ -9,88 +9,92 @@ import os
 
 def get_initial_material_composition():
     """
-    Get initial TRU fuel composition from fuel_blanket_3.py material definition.
+    Get initial spent UO2 fuel composition from fuel_blanket_4.py material definition.
     Returns dictionary of nuclide: atom_fraction pairs.
     """
-    # TRU fuel composition (no uranium) - normalized fractions
-    # From fuel_blanket_3.py with scaling factor 1/0.68652
-    scale = 1.0 / 0.68652
+    # Spent UO2 fuel composition WITH uranium - direct fractions from fuel_blanket_4.py
+    # No scaling needed - using exact values from the file
     
     composition = {
         # Oxygen
-        'O16': 6.7187968E-01 * scale,
+        'O16': 6.7187968E-01,
+        
+        # Uranium isotopes (present in Iteration 4)
+        'U238': 3.0769658E-01,
+        'U235': 3.4979859E-03,
+        'U236': 2.1091663E-03,
+        'U234': 6.4111968E-05,
+        'U237': 1.7067631E-07,
         
         # Transuranics - Plutonium
-        'Pu239': 2.5718196E-03 * scale,
-        'Pu240': 1.0215150E-03 * scale,
-        'Pu241': 6.7015516E-04 * scale,
-        'Pu242': 2.6644975E-04 * scale,
-        'Pu238': 1.3101157E-04 * scale,
-        'Pu244': 9.4590026E-09 * scale,
+        'Pu239': 2.5718196E-03,
+        'Pu240': 1.0215150E-03,
+        'Pu241': 6.7015516E-04,
+        'Pu242': 2.6644975E-04,
+        'Pu238': 1.3101157E-04,
         
         # Transuranics - Neptunium
-        'Np237': 2.7884345E-04 * scale,
-        'Np239': 3.2856837E-09 * scale,
+        'Np237': 2.7884345E-04,
         
         # Transuranics - Americium
-        'Am243': 7.8638873E-05 * scale,
-        'Am241': 3.1275801E-05 * scale,
+        'Am243': 7.8638873E-05,
+        'Am241': 3.1275801E-05,
         
         # Transuranics - Curium
-        'Cm244': 3.2900525E-05 * scale,
-        'Cm242': 7.3636478E-06 * scale,
-        'Cm245': 1.9560548E-06 * scale,
-        'Cm243': 3.0834446E-07 * scale,
-        'Cm246': 1.9481932E-07 * scale,
+        'Cm244': 3.2900525E-05,
+        'Cm242': 7.3636478E-06,
+        'Cm245': 1.9560548E-06,
+        'Cm243': 3.0834446E-07,
+        'Cm246': 1.9481932E-07,
         
         # Fission Products
-        'Cs137': 1.0510726E-03 * scale,
-        'Cs133': 9.7963234E-04 * scale,
-        'Tc99': 9.3559531E-04 * scale,
-        'Ru101': 9.1992123E-04 * scale,
-        'Zr93': 8.9218967E-04 * scale,
-        'Mo95': 8.5245707E-04 * scale,
-        'Sr90': 6.7977794E-04 * scale,
-        'Nd143': 6.5286858E-04 * scale,
-        'Nd145': 5.3344636E-04 * scale,
-        'Rh103': 4.8652147E-04 * scale,
-        'Cs135': 4.8545594E-04 * scale,
-        'Pd107': 2.5941176E-04 * scale,
-        'Sm150': 2.2788081E-04 * scale,
-        'I129': 1.4371885E-04 * scale,
-        'Pm147': 1.0269899E-04 * scale,
-        'Eu153': 9.2879588E-05 * scale,
-        'Sm152': 8.8634337E-05 * scale,
-        'Ag109': 8.5141959E-05 * scale,
-        'Sm147': 6.6014495E-05 * scale,
-        'Ru103': 1.9360418E-05 * scale,
-        'Sn126': 1.8018478E-05 * scale,
-        'Nb95': 1.4824839E-05 * scale,
-        'Cl36': 1.4019981E-05 * scale,
-        'Ca41': 1.4019976E-05 * scale,
-        'Ni59': 1.4019973E-05 * scale,
-        'Sm151': 1.3614245E-05 * scale,
-        'Se79': 7.0915868E-06 * scale,
-        'Eu155': 4.7729475E-06 * scale,
-        'Pr143': 2.0561139E-06 * scale,
-        'Sm149': 1.9355989E-06 * scale,
-        'Nd147': 5.1292485E-07 * scale,
-        'Xe133': 9.3481328E-08 * scale,
-        'Gd155': 7.6579955E-08 * scale,
-        'I133': 7.5534463E-08 * scale,
-        'Eu152': 4.5260253E-08 * scale,
-        'Mo99': 1.1472054E-09 * scale,
+        'Cs137': 1.0510726E-03,
+        'Cs133': 9.7963234E-04,
+        'Tc99': 9.3559531E-04,
+        'Ru101': 9.1992123E-04,
+        'Zr93': 8.9218967E-04,
+        'Mo95': 8.5245707E-04,
+        'Sr90': 6.7977794E-04,
+        'Nd143': 6.5286858E-04,
+        'Nd145': 5.3344636E-04,
+        'Rh103': 4.8652147E-04,
+        'Cs135': 4.8545594E-04,
+        'Pd107': 2.5941176E-04,
+        'Sm150': 2.2788081E-04,
+        'I129': 1.4371885E-04,
+        'Pm147': 1.0269899E-04,
+        'Eu153': 9.2879588E-05,
+        'Sm152': 8.8634337E-05,
+        'Ag109': 8.5141959E-05,
+        'Sm147': 6.6014495E-05,
+        'Ru103': 1.9360418E-05,
+        'Sn126': 1.8018478E-05,
+        'Nb95': 1.4824839E-05,
+        'Cl36': 1.4019981E-05,
+        'Ca41': 1.4019976E-05,
+        'Ni59': 1.4019973E-05,
+        'Sm151': 1.3614245E-05,
+        'Se79': 7.0915868E-06,
+        'Eu155': 4.7729475E-06,
+        'Pr143': 2.0561139E-06,
+        'Sm149': 1.9355989E-06,
+        'Nd147': 5.1292485E-07,
+        'Xe133': 9.3481328E-08,
+        'Gd155': 7.6579955E-08,
+        'I133': 7.5534463E-08,
+        'Eu152': 4.5260253E-08,
+        'Mo99': 1.1472054E-09 / 0.68652,
     }
     
     return composition
 
-def calculate_initial_atom_counts(volume_cm3=3.6652e6, density_atom_per_barn_cm=4.896E-02):
+def calculate_initial_atom_counts(volume_cm3=3.6652e6, density_atom_per_barn_cm=7.133315757E-02):
     """
     Calculate initial atom counts from material definition.
     
     Args:
         volume_cm3: Volume in cm³ (default: spherical shell 50-100cm radius)
-        density_atom_per_barn_cm: Atomic density in atoms/(barn·cm) for TRU fuel
+        density_atom_per_barn_cm: Atomic density in atoms/(barn·cm) for spent UO2 fuel
     
     Returns:
         Dictionary of nuclide: total_atoms
@@ -106,13 +110,25 @@ def calculate_initial_atom_counts(volume_cm3=3.6652e6, density_atom_per_barn_cm=
     
     return initial_counts
 
-def read_depletion_results(h5_file):
-    """Read depletion results from HDF5 file."""
+def read_depletion_results(h5_file, volume_cm3=3.6652e6):
+    """Read depletion results from HDF5 file.
+    
+    Args:
+        h5_file: Path to depletion HDF5 file
+        volume_cm3: Material volume in cm³ (default: spherical shell 50-100cm)
+    
+    Returns:
+        time, nuclides, number (converted to total atoms), keff, source_rate
+    """
     with h5py.File(h5_file, 'r') as f:
         time = f['time'][:]
         nuclides_group = f['nuclides']
         nuclides = list(nuclides_group.keys())
-        number = f['number'][:]
+        number_density = f['number'][:]  # atoms/(barn·cm)
+        
+        # Convert number density to total atoms by multiplying by volume
+        # This matches what Iteration 2 does
+        number = number_density * volume_cm3
         
         # For fixed source, k-eff might not be present
         keff = None
@@ -138,14 +154,14 @@ def generate_summary_report(h5_file, output_file):
     
     with open(output_file, 'w') as f:
         f.write("="*70 + "\n")
-        f.write("ITERATION 3: TRU FUEL DEPLETION SIMULATION SUMMARY\n")
+        f.write("ITERATION 4: SPENT UO2 FUEL DEPLETION SIMULATION SUMMARY\n")
         f.write("="*70 + "\n\n")
         
         f.write("⚠️  DATA QUALITY NOTE:\n")
         f.write("   The HDF5 depletion results show near-zero initial densities.\n")
         f.write("   This is a known OpenMC bug in depletion data recording.\n")
         f.write("   Initial compositions are taken from the material definition (materials.xml)\n")
-        f.write("   which correctly specifies the TRU fuel composition (no uranium).\n")
+        f.write("   which correctly specifies the spent UO2 fuel composition (WITH uranium).\n")
         f.write("   Final states are from the HDF5 file.\n\n")
         
         f.write("⚠️  PARTIAL DATA:\n")
@@ -156,10 +172,20 @@ def generate_summary_report(h5_file, output_file):
         f.write(f"Number of Depletion Steps: {len(time)}\n\n")
         
         # k-eff (if available)
-        if keff is not None:
-            f.write(f"Initial k-eff: {keff[0,0,0]:.5f}\n")
-            f.write(f"Final k-eff: {keff[-1,0,0]:.5f}\n")
-            f.write(f"k-eff Change: {keff[-1,0,0]-keff[0,0,0]:+.5f}\n\n")
+        if keff is not None and keff.size > 0:
+            # Handle both 2D and 3D k-eff arrays
+            if keff.ndim == 3:
+                initial_keff = keff[0,0,0]
+                final_keff = keff[-1,0,0]
+            elif keff.ndim == 2:
+                initial_keff = keff[0,0]
+                final_keff = keff[-1,0]
+            else:
+                initial_keff = keff[0]
+                final_keff = keff[-1]
+            f.write(f"Initial k-eff: {initial_keff:.5f}\n")
+            f.write(f"Final k-eff: {final_keff:.5f}\n")
+            f.write(f"k-eff Change: {final_keff-initial_keff:+.5f}\n\n")
         else:
             f.write("Initial k-eff: N/A (fixed source mode)\n")
             f.write("Final k-eff: N/A (fixed source mode)\n\n")
@@ -180,7 +206,7 @@ def generate_summary_report(h5_file, output_file):
         
         # Initial composition
         f.write("="*70 + "\n")
-        f.write("INITIAL MATERIAL COMPOSITION (from fuel_blanket_3.py)\n")
+        f.write("INITIAL MATERIAL COMPOSITION (from fuel_blanket_4.py)\n")
         f.write("="*70 + "\n\n")
         
         # Sort initial composition by abundance
@@ -200,9 +226,32 @@ def generate_summary_report(h5_file, output_file):
         f.write(f"\nTotal Initial TRU: {initial_tru:.4e} atoms\n")
         f.write(f"Total Initial Atoms: {total_initial_atoms:.4e} atoms\n\n")
         
+        # Add uranium totals
+        uranium_elements = ['U']
+        initial_uranium = sum(count for nuc, count in initial_counts.items() 
+                            if any(nuc.startswith(elem) for elem in uranium_elements))
+        f.write(f"Total Initial Uranium: {initial_uranium:.4e} atoms\n\n")
+        
         f.write("="*70 + "\n")
-        f.write("NOTE: NO URANIUM PRESENT - Testing TRU transmutation only\n")
+        f.write("NOTE: SPENT UO2 FUEL - Contains uranium and transuranics\n")
         f.write("="*70 + "\n\n")
+        
+        # Uranium evolution
+        f.write("-"*70 + "\n")
+        f.write("URANIUM ISOTOPES EVOLUTION\n")
+        f.write("-"*70 + "\n\n")
+        
+        uranium_nuclides = ['U234', 'U235', 'U236', 'U237', 'U238']
+        
+        for nuc_name in uranium_nuclides:
+            if nuc_name in nuclides:
+                idx = nuclides.index(nuc_name)
+                initial = initial_counts.get(nuc_name, 0.0)
+                final = number[-1, 0, idx]
+                pct_change = ((final - initial) / initial * 100) if initial > 0 else 0
+                f.write(f"  {nuc_name:>12s}: {initial:.4e} → {final:.4e} atoms ({pct_change:+.1f}%)\n")
+        
+        f.write("\n")
         
         # TRU evolution
         f.write("-"*70 + "\n")
@@ -218,7 +267,7 @@ def generate_summary_report(h5_file, output_file):
             if nuc_name in nuclides:
                 idx = nuclides.index(nuc_name)
                 initial = initial_counts.get(nuc_name, 0.0)
-                final = number[-1, 0, 0, idx]
+                final = number[-1, 0, idx]
                 
                 if initial > 0:
                     change_pct = ((final - initial) / initial) * 100
@@ -238,7 +287,7 @@ def generate_summary_report(h5_file, output_file):
             if nuc_name in nuclides:
                 idx = nuclides.index(nuc_name)
                 initial = initial_counts.get(nuc_name, 0.0)
-                final = number[-1, 0, 0, idx]
+                final = number[-1, 0, idx]
                 
                 if initial > 0:
                     change_pct = ((final - initial) / initial) * 100
@@ -269,7 +318,7 @@ def analyze_waste_transmutation(nuclides, number, initial_counts, f):
         if any(nuc_name.startswith(elem) for elem in tru_elements):
             idx = nuclides.index(nuc_name)
             initial = initial_counts.get(nuc_name, 0.0)
-            final = number[-1, 0, 0, idx]
+            final = number[-1, 0, idx]
             
             initial_tru += initial
             final_tru += final
@@ -293,8 +342,8 @@ def analyze_waste_transmutation(nuclides, number, initial_counts, f):
         f.write(f"    Successfully transmuted {abs(net_tru_change):.4e} TRU atoms\n\n")
     else:
         f.write(f"  ✗ TRU INCREASED: {tru_change_pct:.2f}% increase\n")
-        f.write(f"    This should NOT happen with no uranium present!\n")
-        f.write(f"    May indicate production from fission or other reactions\n\n")
+        f.write(f"    TRU production from U238 neutron capture and subsequent decay\n")
+        f.write(f"    This is expected in uranium-bearing fuel\n\n")
     
     # Individual TRU isotopes
     tru_details.sort(key=lambda x: x[1], reverse=True)
@@ -317,7 +366,7 @@ def analyze_waste_transmutation(nuclides, number, initial_counts, f):
         if nuc_name in nuclides:
             idx = nuclides.index(nuc_name)
             initial = initial_counts.get(nuc_name, 0.0)
-            final = number[-1, 0, 0, idx]
+            final = number[-1, 0, idx]
             initial_llfp += initial
             final_llfp += final
             llfp_details.append((nuc_name, initial, final))

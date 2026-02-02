@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<settings>
+  <run_mode>fixed source</run_mode>
+  <particles>5000</particles>
+  <batches>30</batches>
+  <inactive>10</inactive>
+  <source type="independent" strength="1e+16" particle="neutron">
+    <space type="point">
+      <parameters>0 0 0</parameters>
+    </space>
+    <angle type="isotropic"/>
+    <energy type="discrete">
+      <parameters>2450000.0 1.0</parameters>
+    </energy>
+  </source>
+  <seed>42</seed>
+</settings>
