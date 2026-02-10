@@ -1,0 +1,855 @@
+nohup: ignoring input
+======================================================================
+FUSION-FISSION HYBRID: MANUAL DEPLETION
+======================================================================
+
+This simulation properly handles:
+  - External D-D fusion source: 2.45 MeV @ 1.00e+14 n/s
+  - Fission multiplication in subcritical fuel
+  - Accurate reaction rate normalization
+
+Depletion: 4 steps × 90 days = 360 days
+======================================================================
+
+Building geometry...
+Geometry: Fuel shell (r=50-100 cm) with inner Na coolant
+Burnable material: spent UO2 (ID=1)
+Initial volume: 3.6652e+06 cm³
+
+Creating D-D fusion point source...
+
+Transport settings:
+  Particles per batch: 5,000
+  Active batches: 20
+  Total active particles: 100,000
+
+Setting up reaction rate tallies...
+Tallies created: nuclide-specific fission/capture, aggregate fission/capture, (n,2n), (n,3n), flux
+
+Setting up 3D mesh tallies for spatial visualization...
+3D mesh tallies created: heating, flux, fission (44x44x44 mesh)
+
+Loading depletion chain from /workspaces/MEng172-OpenMC/models/FusionFissionReactor/Iteration6_fixed_source_depleatable/chain_reduced_tru.xml...
+Chain loaded: 1760 nuclides
+
+======================================================================
+STARTING MANUAL DEPLETION
+======================================================================
+
+======================================================================
+STEP 1/4: t = 0.0 days
+======================================================================
+
+Running transport calculation...
+                                %%%%%%%%%%%%%%%
+                           %%%%%%%%%%%%%%%%%%%%%%%%
+                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                    %%%%%%%%%%%%%%%%%%%%%%%%
+                                     %%%%%%%%%%%%%%%%%%%%%%%%
+                 ###############      %%%%%%%%%%%%%%%%%%%%%%%%
+                ##################     %%%%%%%%%%%%%%%%%%%%%%%
+                ###################     %%%%%%%%%%%%%%%%%%%%%%%
+                ####################     %%%%%%%%%%%%%%%%%%%%%%
+                #####################     %%%%%%%%%%%%%%%%%%%%%
+                ######################     %%%%%%%%%%%%%%%%%%%%
+                #######################     %%%%%%%%%%%%%%%%%%
+                 #######################     %%%%%%%%%%%%%%%%%
+                 ######################     %%%%%%%%%%%%%%%%%
+                  ####################     %%%%%%%%%%%%%%%%%
+                    #################     %%%%%%%%%%%%%%%%%
+                     ###############     %%%%%%%%%%%%%%%%
+                       ############     %%%%%%%%%%%%%%%
+                          ########     %%%%%%%%%%%%%%
+                                      %%%%%%%%%%%
+
+                 | The OpenMC Monte Carlo Code
+       Copyright | 2011-2025 MIT, UChicago Argonne LLC, and contributors
+         License | https://docs.openmc.org/en/latest/license.html
+         Version | 0.15.3
+     Commit Hash | 27e38e894697bb32a1dac7848d2618818b6b8daf
+       Date/Time | 2026-02-06 23:37:52
+   MPI Processes | 1
+  OpenMP Threads | 4
+
+ Reading model XML file 'model.xml' ...
+ WARNING: Other XML file input(s) are present. These files may be ignored in
+          favor of the model.xml file.
+ Reading cross sections XML file...
+ Reading O16 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/O16.h5
+ Reading U238 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U238.h5
+ Reading U235 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U235.h5
+ Reading U236 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U236.h5
+ Reading U234 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U234.h5
+ Reading U237 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U237.h5
+ Reading Pu239 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu239.h5
+ Reading Pu240 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu240.h5
+ Reading Pu241 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu241.h5
+ Reading Pu242 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu242.h5
+ Reading Pu238 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu238.h5
+ Reading Np237 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Np237.h5
+ Reading Am243 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Am243.h5
+ Reading Am241 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Am241.h5
+ Reading Cm244 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cm244.h5
+ Reading Cm242 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cm242.h5
+ Reading Cm245 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cm245.h5
+ Reading Cm243 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cm243.h5
+ Reading Cm246 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cm246.h5
+ Reading Cs137 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cs137.h5
+ Reading Cs133 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cs133.h5
+ Reading Tc99 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Tc99.h5
+ Reading Ru101 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ru101.h5
+ Reading Zr93 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Zr93.h5
+ Reading Mo95 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Mo95.h5
+ Reading Sr90 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sr90.h5
+ Reading Nd143 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nd143.h5
+ Reading Nd145 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nd145.h5
+ Reading Rh103 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Rh103.h5
+ Reading Cs135 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cs135.h5
+ Reading Pd107 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pd107.h5
+ Reading Sm150 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm150.h5
+ Reading I129 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/I129.h5
+ Reading Pm147 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pm147.h5
+ Reading Eu153 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Eu153.h5
+ Reading Sm152 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm152.h5
+ Reading Ag109 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ag109.h5
+ Reading Sm147 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm147.h5
+ Reading Ru103 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ru103.h5
+ Reading Sn126 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sn126.h5
+ Reading Nb95 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nb95.h5
+ WARNING: Negative value(s) found on probability table for nuclide Nb95 at 294K
+ Reading Cl36 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cl36.h5
+ Reading Ca41 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ca41.h5
+ Reading Ni59 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ni59.h5
+ Reading Sm151 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm151.h5
+ Reading Se79 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Se79.h5
+ WARNING: Negative value(s) found on probability table for nuclide Se79 at 294K
+ Reading Eu155 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Eu155.h5
+ Reading Pr143 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pr143.h5
+ Reading Sm149 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm149.h5
+ Reading Nd147 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nd147.h5
+ Reading Xe133 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Xe133.h5
+ Reading Gd155 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Gd155.h5
+ Reading I133 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/I133.h5
+ Reading Eu152 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Eu152.h5
+ Reading Mo99 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Mo99.h5
+ WARNING: Negative value(s) found on probability table for nuclide Mo99 at 294K
+ Reading Na23 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Na23.h5
+ Minimum neutron data temperature: 294 K
+ Maximum neutron data temperature: 294 K
+ Preparing distributed cell instances...
+ Writing summary.h5 file...
+ Maximum neutron transport energy: 20000000 eV for Pu239
+
+ ===============>     FIXED SOURCE TRANSPORT SIMULATION     <===============
+
+ Simulating batch 1
+ Simulating batch 2
+ Simulating batch 3
+ Simulating batch 4
+ Simulating batch 5
+ Simulating batch 6
+ Simulating batch 7
+ Simulating batch 8
+ Simulating batch 9
+ Simulating batch 10
+ Simulating batch 11
+ Simulating batch 12
+ Simulating batch 13
+ Simulating batch 14
+ Simulating batch 15
+ Simulating batch 16
+ Simulating batch 17
+ Simulating batch 18
+ Simulating batch 19
+ Simulating batch 20
+ Simulating batch 21
+ Simulating batch 22
+ Simulating batch 23
+ Simulating batch 24
+ Simulating batch 25
+ Simulating batch 26
+ Simulating batch 27
+ Simulating batch 28
+ Simulating batch 29
+ Simulating batch 30
+ Creating state point statepoint.30.h5...
+
+ =======================>     TIMING STATISTICS     <=======================
+
+ Total time for initialization     = 5.8708e+00 seconds
+   Reading cross sections          = 5.8603e+00 seconds
+ Total time in simulation          = 1.0940e+02 seconds
+   Time in transport only          = 1.0936e+02 seconds
+   Time in active batches          = 1.0940e+02 seconds
+   Time accumulating tallies       = 1.3917e-02 seconds
+   Time writing statepoints        = 2.2448e-02 seconds
+ Total time for finalization       = 2.4043e-01 seconds
+ Total time elapsed                = 1.1552e+02 seconds
+ Calculation Rate (active)         = 1371.17 particles/second
+
+ ============================>     RESULTS     <============================
+
+ Leakage Fraction            = 0.07865 +/- 0.00104
+
+Transport complete. Extracting reaction rates...
+
+Per-source-neutron rates:
+  Fission:     4.0940e-01 fissions/neutron
+  Nu-fission:  1.1009e+00 neutrons/neutron
+  Capture:     1.6016e+00 captures/neutron
+
+Reaction rates [per second]:
+  Fission:     4.0940e+13 fissions/s
+  Nu-fission:  1.1009e+14 neutrons/s (from fission)
+  Capture:     1.6016e+14 captures/s
+  (n,2n):      3.7295e+11 reactions/s
+  Total flux:  2.0938e+16 n·cm/s
+
+  k_source (multiplication): 1.1009
+  (Each source neutron produces 1.1009 fission neutrons)
+
+  Fission power: 1.31e+03 W = 1.31 kW = 0.0013 MW
+
+======================================================================
+CALCULATING NUCLIDE-SPECIFIC DEPLETION
+======================================================================
+
+Using nuclide-specific reaction rate tallies for accurate depletion
+
+Current total atoms: 2.614e+29
+Time step: 7.78e+06 seconds (90 days)
+
+Nuclide-specific depletion:
+
+Top 10 overall isotope changes:
+  U238    : -1.197e+21 atoms (-0.000%)
+  U235    : -1.303e+20 atoms (-0.000%)
+  Pu239   : -8.772e+19 atoms (-0.000%)
+  Pu241   : -2.937e+19 atoms (-0.000%)
+  Pu240   : -1.351e+19 atoms (-0.000%)
+  Pu238   : -3.188e+18 atoms (-0.000%)
+  Pu242   : -2.634e+18 atoms (-0.000%)
+
+Updating material composition for next transport step...
+
+Advancing time by 90 days...
+
+======================================================================
+STEP 2/4: t = 90.0 days
+======================================================================
+
+Running transport calculation...
+                                %%%%%%%%%%%%%%%
+                           %%%%%%%%%%%%%%%%%%%%%%%%
+                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                    %%%%%%%%%%%%%%%%%%%%%%%%
+                                     %%%%%%%%%%%%%%%%%%%%%%%%
+                 ###############      %%%%%%%%%%%%%%%%%%%%%%%%
+                ##################     %%%%%%%%%%%%%%%%%%%%%%%
+                ###################     %%%%%%%%%%%%%%%%%%%%%%%
+                ####################     %%%%%%%%%%%%%%%%%%%%%%
+                #####################     %%%%%%%%%%%%%%%%%%%%%
+                ######################     %%%%%%%%%%%%%%%%%%%%
+                #######################     %%%%%%%%%%%%%%%%%%
+                 #######################     %%%%%%%%%%%%%%%%%
+                 ######################     %%%%%%%%%%%%%%%%%
+                  ####################     %%%%%%%%%%%%%%%%%
+                    #################     %%%%%%%%%%%%%%%%%
+                     ###############     %%%%%%%%%%%%%%%%
+                       ############     %%%%%%%%%%%%%%%
+                          ########     %%%%%%%%%%%%%%
+                                      %%%%%%%%%%%
+
+                 | The OpenMC Monte Carlo Code
+       Copyright | 2011-2025 MIT, UChicago Argonne LLC, and contributors
+         License | https://docs.openmc.org/en/latest/license.html
+         Version | 0.15.3
+     Commit Hash | 27e38e894697bb32a1dac7848d2618818b6b8daf
+       Date/Time | 2026-02-06 23:39:49
+   MPI Processes | 1
+  OpenMP Threads | 4
+
+ Reading model XML file 'model.xml' ...
+ WARNING: Other XML file input(s) are present. These files may be ignored in
+          favor of the model.xml file.
+ Reading cross sections XML file...
+ Reading O16 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/O16.h5
+ Reading U238 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U238.h5
+ Reading U235 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U235.h5
+ Reading U236 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U236.h5
+ Reading U234 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U234.h5
+ Reading U237 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U237.h5
+ Reading Pu239 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu239.h5
+ Reading Pu240 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu240.h5
+ Reading Pu241 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu241.h5
+ Reading Pu242 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu242.h5
+ Reading Pu238 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu238.h5
+ Reading Np237 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Np237.h5
+ Reading Am243 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Am243.h5
+ Reading Am241 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Am241.h5
+ Reading Cm244 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cm244.h5
+ Reading Cm242 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cm242.h5
+ Reading Cm245 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cm245.h5
+ Reading Cm243 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cm243.h5
+ Reading Cm246 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cm246.h5
+ Reading Cs137 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cs137.h5
+ Reading Cs133 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cs133.h5
+ Reading Tc99 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Tc99.h5
+ Reading Ru101 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ru101.h5
+ Reading Zr93 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Zr93.h5
+ Reading Mo95 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Mo95.h5
+ Reading Sr90 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sr90.h5
+ Reading Nd143 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nd143.h5
+ Reading Nd145 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nd145.h5
+ Reading Rh103 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Rh103.h5
+ Reading Cs135 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cs135.h5
+ Reading Pd107 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pd107.h5
+ Reading Sm150 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm150.h5
+ Reading I129 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/I129.h5
+ Reading Pm147 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pm147.h5
+ Reading Eu153 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Eu153.h5
+ Reading Sm152 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm152.h5
+ Reading Ag109 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ag109.h5
+ Reading Sm147 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm147.h5
+ Reading Ru103 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ru103.h5
+ Reading Sn126 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sn126.h5
+ Reading Nb95 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nb95.h5
+ WARNING: Negative value(s) found on probability table for nuclide Nb95 at 294K
+ Reading Cl36 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cl36.h5
+ Reading Ca41 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ca41.h5
+ Reading Ni59 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ni59.h5
+ Reading Sm151 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm151.h5
+ Reading Se79 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Se79.h5
+ WARNING: Negative value(s) found on probability table for nuclide Se79 at 294K
+ Reading Eu155 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Eu155.h5
+ Reading Pr143 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pr143.h5
+ Reading Sm149 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm149.h5
+ Reading Nd147 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nd147.h5
+ Reading Xe133 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Xe133.h5
+ Reading Gd155 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Gd155.h5
+ Reading I133 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/I133.h5
+ Reading Eu152 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Eu152.h5
+ Reading Mo99 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Mo99.h5
+ WARNING: Negative value(s) found on probability table for nuclide Mo99 at 294K
+ Reading Na23 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Na23.h5
+ Minimum neutron data temperature: 294 K
+ Maximum neutron data temperature: 294 K
+ Preparing distributed cell instances...
+ Writing summary.h5 file...
+ Maximum neutron transport energy: 20000000 eV for Pu239
+
+ ===============>     FIXED SOURCE TRANSPORT SIMULATION     <===============
+
+ Simulating batch 1
+ Simulating batch 2
+ Simulating batch 3
+ Simulating batch 4
+ Simulating batch 5
+ Simulating batch 6
+ Simulating batch 7
+ Simulating batch 8
+ Simulating batch 9
+ Simulating batch 10
+ Simulating batch 11
+ Simulating batch 12
+ Simulating batch 13
+ Simulating batch 14
+ Simulating batch 15
+ Simulating batch 16
+ Simulating batch 17
+ Simulating batch 18
+ Simulating batch 19
+ Simulating batch 20
+ Simulating batch 21
+ Simulating batch 22
+ Simulating batch 23
+ Simulating batch 24
+ Simulating batch 25
+ Simulating batch 26
+ Simulating batch 27
+ Simulating batch 28
+ Simulating batch 29
+ Simulating batch 30
+ Creating state point statepoint.30.h5...
+
+ =======================>     TIMING STATISTICS     <=======================
+
+ Total time for initialization     = 5.7657e+00 seconds
+   Reading cross sections          = 5.7552e+00 seconds
+ Total time in simulation          = 1.0977e+02 seconds
+   Time in transport only          = 1.0973e+02 seconds
+   Time in active batches          = 1.0977e+02 seconds
+   Time accumulating tallies       = 1.3464e-02 seconds
+   Time writing statepoints        = 2.1388e-02 seconds
+ Total time for finalization       = 2.4402e-01 seconds
+ Total time elapsed                = 1.1580e+02 seconds
+ Calculation Rate (active)         = 1366.48 particles/second
+
+ ============================>     RESULTS     <============================
+
+ Leakage Fraction            = 0.07865 +/- 0.00104
+
+Transport complete. Extracting reaction rates...
+
+Per-source-neutron rates:
+  Fission:     4.0940e-01 fissions/neutron
+  Nu-fission:  1.1009e+00 neutrons/neutron
+  Capture:     1.6016e+00 captures/neutron
+
+Reaction rates [per second]:
+  Fission:     4.0940e+13 fissions/s
+  Nu-fission:  1.1009e+14 neutrons/s (from fission)
+  Capture:     1.6016e+14 captures/s
+  (n,2n):      3.7295e+11 reactions/s
+  Total flux:  2.0938e+16 n·cm/s
+
+  k_source (multiplication): 1.1009
+  (Each source neutron produces 1.1009 fission neutrons)
+
+  Fission power: 1.31e+03 W = 1.31 kW = 0.0013 MW
+
+======================================================================
+CALCULATING NUCLIDE-SPECIFIC DEPLETION
+======================================================================
+
+Using nuclide-specific reaction rate tallies for accurate depletion
+
+Current total atoms: 2.614e+29
+Time step: 7.78e+06 seconds (90 days)
+
+Nuclide-specific depletion:
+
+Top 10 overall isotope changes:
+  U238    : -1.197e+21 atoms (-0.000%)
+  U235    : -1.303e+20 atoms (-0.000%)
+  Pu239   : -8.772e+19 atoms (-0.000%)
+  Pu241   : -2.937e+19 atoms (-0.000%)
+  Pu240   : -1.351e+19 atoms (-0.000%)
+  Pu238   : -3.188e+18 atoms (-0.000%)
+  Pu242   : -2.634e+18 atoms (-0.000%)
+
+Updating material composition for next transport step...
+
+Advancing time by 90 days...
+
+======================================================================
+STEP 3/4: t = 180.0 days
+======================================================================
+
+Running transport calculation...
+                                %%%%%%%%%%%%%%%
+                           %%%%%%%%%%%%%%%%%%%%%%%%
+                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                    %%%%%%%%%%%%%%%%%%%%%%%%
+                                     %%%%%%%%%%%%%%%%%%%%%%%%
+                 ###############      %%%%%%%%%%%%%%%%%%%%%%%%
+                ##################     %%%%%%%%%%%%%%%%%%%%%%%
+                ###################     %%%%%%%%%%%%%%%%%%%%%%%
+                ####################     %%%%%%%%%%%%%%%%%%%%%%
+                #####################     %%%%%%%%%%%%%%%%%%%%%
+                ######################     %%%%%%%%%%%%%%%%%%%%
+                #######################     %%%%%%%%%%%%%%%%%%
+                 #######################     %%%%%%%%%%%%%%%%%
+                 ######################     %%%%%%%%%%%%%%%%%
+                  ####################     %%%%%%%%%%%%%%%%%
+                    #################     %%%%%%%%%%%%%%%%%
+                     ###############     %%%%%%%%%%%%%%%%
+                       ############     %%%%%%%%%%%%%%%
+                          ########     %%%%%%%%%%%%%%
+                                      %%%%%%%%%%%
+
+                 | The OpenMC Monte Carlo Code
+       Copyright | 2011-2025 MIT, UChicago Argonne LLC, and contributors
+         License | https://docs.openmc.org/en/latest/license.html
+         Version | 0.15.3
+     Commit Hash | 27e38e894697bb32a1dac7848d2618818b6b8daf
+       Date/Time | 2026-02-06 23:41:47
+   MPI Processes | 1
+  OpenMP Threads | 4
+
+ Reading model XML file 'model.xml' ...
+ WARNING: Other XML file input(s) are present. These files may be ignored in
+          favor of the model.xml file.
+ Reading cross sections XML file...
+ Reading O16 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/O16.h5
+ Reading U238 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U238.h5
+ Reading U235 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U235.h5
+ Reading U236 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U236.h5
+ Reading U234 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U234.h5
+ Reading U237 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U237.h5
+ Reading Pu239 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu239.h5
+ Reading Pu240 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu240.h5
+ Reading Pu241 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu241.h5
+ Reading Pu242 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu242.h5
+ Reading Pu238 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu238.h5
+ Reading Np237 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Np237.h5
+ Reading Am243 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Am243.h5
+ Reading Am241 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Am241.h5
+ Reading Cm244 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cm244.h5
+ Reading Cm242 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cm242.h5
+ Reading Cm245 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cm245.h5
+ Reading Cm243 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cm243.h5
+ Reading Cm246 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cm246.h5
+ Reading Cs137 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cs137.h5
+ Reading Cs133 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cs133.h5
+ Reading Tc99 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Tc99.h5
+ Reading Ru101 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ru101.h5
+ Reading Zr93 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Zr93.h5
+ Reading Mo95 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Mo95.h5
+ Reading Sr90 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sr90.h5
+ Reading Nd143 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nd143.h5
+ Reading Nd145 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nd145.h5
+ Reading Rh103 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Rh103.h5
+ Reading Cs135 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cs135.h5
+ Reading Pd107 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pd107.h5
+ Reading Sm150 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm150.h5
+ Reading I129 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/I129.h5
+ Reading Pm147 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pm147.h5
+ Reading Eu153 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Eu153.h5
+ Reading Sm152 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm152.h5
+ Reading Ag109 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ag109.h5
+ Reading Sm147 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm147.h5
+ Reading Ru103 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ru103.h5
+ Reading Sn126 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sn126.h5
+ Reading Nb95 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nb95.h5
+ WARNING: Negative value(s) found on probability table for nuclide Nb95 at 294K
+ Reading Cl36 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cl36.h5
+ Reading Ca41 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ca41.h5
+ Reading Ni59 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ni59.h5
+ Reading Sm151 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm151.h5
+ Reading Se79 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Se79.h5
+ WARNING: Negative value(s) found on probability table for nuclide Se79 at 294K
+ Reading Eu155 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Eu155.h5
+ Reading Pr143 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pr143.h5
+ Reading Sm149 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm149.h5
+ Reading Nd147 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nd147.h5
+ Reading Xe133 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Xe133.h5
+ Reading Gd155 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Gd155.h5
+ Reading I133 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/I133.h5
+ Reading Eu152 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Eu152.h5
+ Reading Mo99 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Mo99.h5
+ WARNING: Negative value(s) found on probability table for nuclide Mo99 at 294K
+ Reading Na23 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Na23.h5
+ Minimum neutron data temperature: 294 K
+ Maximum neutron data temperature: 294 K
+ Preparing distributed cell instances...
+ Writing summary.h5 file...
+ Maximum neutron transport energy: 20000000 eV for Pu239
+
+ ===============>     FIXED SOURCE TRANSPORT SIMULATION     <===============
+
+ Simulating batch 1
+ Simulating batch 2
+ Simulating batch 3
+ Simulating batch 4
+ Simulating batch 5
+ Simulating batch 6
+ Simulating batch 7
+ Simulating batch 8
+ Simulating batch 9
+ Simulating batch 10
+ Simulating batch 11
+ Simulating batch 12
+ Simulating batch 13
+ Simulating batch 14
+ Simulating batch 15
+ Simulating batch 16
+ Simulating batch 17
+ Simulating batch 18
+ Simulating batch 19
+ Simulating batch 20
+ Simulating batch 21
+ Simulating batch 22
+ Simulating batch 23
+ Simulating batch 24
+ Simulating batch 25
+ Simulating batch 26
+ Simulating batch 27
+ Simulating batch 28
+ Simulating batch 29
+ Simulating batch 30
+ Creating state point statepoint.30.h5...
+
+ =======================>     TIMING STATISTICS     <=======================
+
+ Total time for initialization     = 5.6236e+00 seconds
+   Reading cross sections          = 5.6123e+00 seconds
+ Total time in simulation          = 1.1492e+02 seconds
+   Time in transport only          = 1.1486e+02 seconds
+   Time in active batches          = 1.1492e+02 seconds
+   Time accumulating tallies       = 4.1005e-02 seconds
+   Time writing statepoints        = 2.3954e-02 seconds
+ Total time for finalization       = 2.6405e-01 seconds
+ Total time elapsed                = 1.2083e+02 seconds
+ Calculation Rate (active)         = 1305.23 particles/second
+
+ ============================>     RESULTS     <============================
+
+ Leakage Fraction            = 0.07865 +/- 0.00104
+
+Transport complete. Extracting reaction rates...
+
+Per-source-neutron rates:
+  Fission:     4.0940e-01 fissions/neutron
+  Nu-fission:  1.1009e+00 neutrons/neutron
+  Capture:     1.6016e+00 captures/neutron
+
+Reaction rates [per second]:
+  Fission:     4.0940e+13 fissions/s
+  Nu-fission:  1.1009e+14 neutrons/s (from fission)
+  Capture:     1.6016e+14 captures/s
+  (n,2n):      3.7295e+11 reactions/s
+  Total flux:  2.0938e+16 n·cm/s
+
+  k_source (multiplication): 1.1009
+  (Each source neutron produces 1.1009 fission neutrons)
+
+  Fission power: 1.31e+03 W = 1.31 kW = 0.0013 MW
+
+======================================================================
+CALCULATING NUCLIDE-SPECIFIC DEPLETION
+======================================================================
+
+Using nuclide-specific reaction rate tallies for accurate depletion
+
+Current total atoms: 2.614e+29
+Time step: 7.78e+06 seconds (90 days)
+
+Nuclide-specific depletion:
+
+Top 10 overall isotope changes:
+  U238    : -1.197e+21 atoms (-0.000%)
+  U235    : -1.303e+20 atoms (-0.000%)
+  Pu239   : -8.772e+19 atoms (-0.000%)
+  Pu241   : -2.937e+19 atoms (-0.000%)
+  Pu240   : -1.351e+19 atoms (-0.000%)
+  Pu238   : -3.188e+18 atoms (-0.000%)
+  Pu242   : -2.634e+18 atoms (-0.000%)
+
+Updating material composition for next transport step...
+
+Advancing time by 90 days...
+
+======================================================================
+STEP 4/4: t = 270.0 days
+======================================================================
+
+Running transport calculation...
+                                %%%%%%%%%%%%%%%
+                           %%%%%%%%%%%%%%%%%%%%%%%%
+                        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                    %%%%%%%%%%%%%%%%%%%%%%%%
+                                     %%%%%%%%%%%%%%%%%%%%%%%%
+                 ###############      %%%%%%%%%%%%%%%%%%%%%%%%
+                ##################     %%%%%%%%%%%%%%%%%%%%%%%
+                ###################     %%%%%%%%%%%%%%%%%%%%%%%
+                ####################     %%%%%%%%%%%%%%%%%%%%%%
+                #####################     %%%%%%%%%%%%%%%%%%%%%
+                ######################     %%%%%%%%%%%%%%%%%%%%
+                #######################     %%%%%%%%%%%%%%%%%%
+                 #######################     %%%%%%%%%%%%%%%%%
+                 ######################     %%%%%%%%%%%%%%%%%
+                  ####################     %%%%%%%%%%%%%%%%%
+                    #################     %%%%%%%%%%%%%%%%%
+                     ###############     %%%%%%%%%%%%%%%%
+                       ############     %%%%%%%%%%%%%%%
+                          ########     %%%%%%%%%%%%%%
+                                      %%%%%%%%%%%
+
+                 | The OpenMC Monte Carlo Code
+       Copyright | 2011-2025 MIT, UChicago Argonne LLC, and contributors
+         License | https://docs.openmc.org/en/latest/license.html
+         Version | 0.15.3
+     Commit Hash | 27e38e894697bb32a1dac7848d2618818b6b8daf
+       Date/Time | 2026-02-06 23:43:49
+   MPI Processes | 1
+  OpenMP Threads | 4
+
+ Reading model XML file 'model.xml' ...
+ WARNING: Other XML file input(s) are present. These files may be ignored in
+          favor of the model.xml file.
+ Reading cross sections XML file...
+ Reading O16 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/O16.h5
+ Reading U238 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U238.h5
+ Reading U235 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U235.h5
+ Reading U236 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U236.h5
+ Reading U234 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U234.h5
+ Reading U237 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/U237.h5
+ Reading Pu239 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu239.h5
+ Reading Pu240 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu240.h5
+ Reading Pu241 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu241.h5
+ Reading Pu242 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu242.h5
+ Reading Pu238 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pu238.h5
+ Reading Np237 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Np237.h5
+ Reading Am243 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Am243.h5
+ Reading Am241 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Am241.h5
+ Reading Cm244 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cm244.h5
+ Reading Cm242 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cm242.h5
+ Reading Cm245 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cm245.h5
+ Reading Cm243 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cm243.h5
+ Reading Cm246 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cm246.h5
+ Reading Cs137 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cs137.h5
+ Reading Cs133 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cs133.h5
+ Reading Tc99 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Tc99.h5
+ Reading Ru101 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ru101.h5
+ Reading Zr93 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Zr93.h5
+ Reading Mo95 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Mo95.h5
+ Reading Sr90 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sr90.h5
+ Reading Nd143 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nd143.h5
+ Reading Nd145 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nd145.h5
+ Reading Rh103 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Rh103.h5
+ Reading Cs135 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cs135.h5
+ Reading Pd107 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pd107.h5
+ Reading Sm150 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm150.h5
+ Reading I129 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/I129.h5
+ Reading Pm147 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pm147.h5
+ Reading Eu153 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Eu153.h5
+ Reading Sm152 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm152.h5
+ Reading Ag109 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ag109.h5
+ Reading Sm147 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm147.h5
+ Reading Ru103 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ru103.h5
+ Reading Sn126 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sn126.h5
+ Reading Nb95 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nb95.h5
+ WARNING: Negative value(s) found on probability table for nuclide Nb95 at 294K
+ Reading Cl36 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Cl36.h5
+ Reading Ca41 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ca41.h5
+ Reading Ni59 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Ni59.h5
+ Reading Sm151 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm151.h5
+ Reading Se79 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Se79.h5
+ WARNING: Negative value(s) found on probability table for nuclide Se79 at 294K
+ Reading Eu155 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Eu155.h5
+ Reading Pr143 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Pr143.h5
+ Reading Sm149 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Sm149.h5
+ Reading Nd147 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Nd147.h5
+ Reading Xe133 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Xe133.h5
+ Reading Gd155 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Gd155.h5
+ Reading I133 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/I133.h5
+ Reading Eu152 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Eu152.h5
+ Reading Mo99 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Mo99.h5
+ WARNING: Negative value(s) found on probability table for nuclide Mo99 at 294K
+ Reading Na23 from /workspaces/MEng172-OpenMC/endfb80-lowtemp/neutron/Na23.h5
+ Minimum neutron data temperature: 294 K
+ Maximum neutron data temperature: 294 K
+ Preparing distributed cell instances...
+ Writing summary.h5 file...
+ Maximum neutron transport energy: 20000000 eV for Pu239
+
+ ===============>     FIXED SOURCE TRANSPORT SIMULATION     <===============
+
+ Simulating batch 1
+ Simulating batch 2
+ Simulating batch 3
+ Simulating batch 4
+ Simulating batch 5
+ Simulating batch 6
+ Simulating batch 7
+ Simulating batch 8
+ Simulating batch 9
+ Simulating batch 10
+ Simulating batch 11
+ Simulating batch 12
+ Simulating batch 13
+ Simulating batch 14
+ Simulating batch 15
+ Simulating batch 16
+ Simulating batch 17
+ Simulating batch 18
+ Simulating batch 19
+ Simulating batch 20
+ Simulating batch 21
+ Simulating batch 22
+ Simulating batch 23
+ Simulating batch 24
+ Simulating batch 25
+ Simulating batch 26
+ Simulating batch 27
+ Simulating batch 28
+ Simulating batch 29
+ Simulating batch 30
+ Creating state point statepoint.30.h5...
+
+ =======================>     TIMING STATISTICS     <=======================
+
+ Total time for initialization     = 5.5309e+00 seconds
+   Reading cross sections          = 5.5199e+00 seconds
+ Total time in simulation          = 1.1449e+02 seconds
+   Time in transport only          = 1.1445e+02 seconds
+   Time in active batches          = 1.1449e+02 seconds
+   Time accumulating tallies       = 8.2661e-03 seconds
+   Time writing statepoints        = 2.5732e-02 seconds
+ Total time for finalization       = 2.7859e-01 seconds
+ Total time elapsed                = 1.2032e+02 seconds
+ Calculation Rate (active)         = 1310.15 particles/second
+
+ ============================>     RESULTS     <============================
+
+ Leakage Fraction            = 0.07865 +/- 0.00104
+
+Transport complete. Extracting reaction rates...
+
+Per-source-neutron rates:
+  Fission:     4.0940e-01 fissions/neutron
+  Nu-fission:  1.1009e+00 neutrons/neutron
+  Capture:     1.6016e+00 captures/neutron
+
+Reaction rates [per second]:
+  Fission:     4.0940e+13 fissions/s
+  Nu-fission:  1.1009e+14 neutrons/s (from fission)
+  Capture:     1.6016e+14 captures/s
+  (n,2n):      3.7295e+11 reactions/s
+  Total flux:  2.0938e+16 n·cm/s
+
+  k_source (multiplication): 1.1009
+  (Each source neutron produces 1.1009 fission neutrons)
+
+  Fission power: 1.31e+03 W = 1.31 kW = 0.0013 MW
+
+======================================================================
+CALCULATING NUCLIDE-SPECIFIC DEPLETION
+======================================================================
+
+Using nuclide-specific reaction rate tallies for accurate depletion
+
+Current total atoms: 2.614e+29
+Time step: 7.78e+06 seconds (90 days)
+
+Nuclide-specific depletion:
+
+Top 10 overall isotope changes:
+  U238    : -1.197e+21 atoms (-0.000%)
+  U235    : -1.303e+20 atoms (-0.000%)
+  Pu239   : -8.772e+19 atoms (-0.000%)
+  Pu241   : -2.937e+19 atoms (-0.000%)
+  Pu240   : -1.351e+19 atoms (-0.000%)
+  Pu238   : -3.188e+18 atoms (-0.000%)
+  Pu242   : -2.634e+18 atoms (-0.000%)
+
+Updating material composition for next transport step...
+
+Advancing time by 90 days...
+
+======================================================================
+MANUAL DEPLETION COMPLETE
+======================================================================
+Total time: 478.33 seconds (7.97 minutes)
+
+Results saved to: /workspaces/MEng172-OpenMC/models/FusionFissionReactor/Iteration6_fixed_source_depleatable/results_manual_depletion/
+
+Completed 4 depletion steps
+Final time: 360.0 days
+======================================================================
+
+Summary saved to: /workspaces/MEng172-OpenMC/models/FusionFissionReactor/Iteration6_fixed_source_depleatable/results_manual_depletion/depletion_summary.txt
+======================================================================

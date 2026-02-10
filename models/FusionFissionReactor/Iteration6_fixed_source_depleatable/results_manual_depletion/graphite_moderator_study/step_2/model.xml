@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='utf-8'?>
+<model>
+  <materials>
+    <material id="1" name="spent UO2" depletable="true" volume="3665191.429188092" temperature="300">
+      <density value="0.07133315598607676" units="atom/b-cm"/>
+      <nuclide name="O16" ao="0.047927299735839826"/>
+      <nuclide name="U238" ao="0.02194896794474916"/>
+      <nuclide name="U235" ao="0.00024952215980046107"/>
+      <nuclide name="U236" ao="0.00015045349407327252"/>
+      <nuclide name="U234" ao="4.57330917790306e-06"/>
+      <nuclide name="U237" ao="1.217488028091148e-08"/>
+      <nuclide name="Pu239" ao="0.0001834557672170996"/>
+      <nuclide name="Pu240" ao="7.286784562328805e-05"/>
+      <nuclide name="Pu241" ao="4.780420808293471e-05"/>
+      <nuclide name="Pu242" ao="1.9006696077989347e-05"/>
+      <nuclide name="Pu238" ao="9.345464213966804e-06"/>
+      <nuclide name="Np237" ao="1.989078402776769e-05"/>
+      <nuclide name="Am243" ao="5.609559195419695e-06"/>
+      <nuclide name="Am241" ao="2.2310016713193028e-06"/>
+      <nuclide name="Cm244" ao="2.346898366001323e-06"/>
+      <nuclide name="Cm242" ao="5.252722559785665e-07"/>
+      <nuclide name="Cm245" ao="1.3953156716888392e-07"/>
+      <nuclide name="Cm243" ao="2.199518425130176e-08"/>
+      <nuclide name="Cm246" ao="1.3897077440967546e-08"/>
+      <nuclide name="Cs137" ao="7.497632841691013e-05"/>
+      <nuclide name="Cs133" ao="6.988026902391533e-05"/>
+      <nuclide name="Tc99" ao="6.673896858112448e-05"/>
+      <nuclide name="Ru101" ao="6.56208869474553e-05"/>
+      <nuclide name="Zr93" ao="6.364270718130665e-05"/>
+      <nuclide name="Mo95" ao="6.080845532614677e-05"/>
+      <nuclide name="Sr90" ao="4.849070756864047e-05"/>
+      <nuclide name="Nd143" ao="4.6571177925446605e-05"/>
+      <nuclide name="Nd145" ao="3.8052413772526524e-05"/>
+      <nuclide name="Rh103" ao="3.4705113154503204e-05"/>
+      <nuclide name="Cs135" ao="3.462910553407996e-05"/>
+      <nuclide name="Pd107" ao="1.8504660204222496e-05"/>
+      <nuclide name="Sm150" ao="1.6255457948833876e-05"/>
+      <nuclide name="I129" ao="1.0251919512791637e-05"/>
+      <nuclide name="Pm147" ao="7.325843335964582e-06"/>
+      <nuclide name="Eu153" ao="6.625394376292657e-06"/>
+      <nuclide name="Sm152" ao="6.3225672136511665e-06"/>
+      <nuclide name="Ag109" ao="6.073444860082068e-06"/>
+      <nuclide name="Sm147" ao="4.709022438028038e-06"/>
+      <nuclide name="Ru103" ao="1.3810397666694557e-06"/>
+      <nuclide name="Sn126" ao="1.2853149478931045e-06"/>
+      <nuclide name="Nb95" ao="1.057502590774241e-06"/>
+      <nuclide name="Cl36" ao="1.0000895274549446e-06"/>
+      <nuclide name="Ca41" ao="1.0000891707891519e-06"/>
+      <nuclide name="Ni59" ao="1.0000889567896762e-06"/>
+      <nuclide name="Sm151" ao="9.711470970399918e-07"/>
+      <nuclide name="Se79" ao="5.058652855319648e-07"/>
+      <nuclide name="Eu155" ao="3.404694207390338e-07"/>
+      <nuclide name="Pr143" ao="1.4666909881294012e-07"/>
+      <nuclide name="Sm149" ao="1.3807238321102649e-07"/>
+      <nuclide name="Nd147" ao="3.658854964613706e-08"/>
+      <nuclide name="Xe133" ao="6.668318391114843e-09"/>
+      <nuclide name="Gd155" ao="5.46269007129688e-09"/>
+      <nuclide name="I133" ao="5.388111824704541e-09"/>
+      <nuclide name="Eu152" ao="3.2285568029843424e-09"/>
+      <nuclide name="Mo99" ao="1.1920087496442287e-10"/>
+    </material>
+    <material id="2" name="graphite_moderator" temperature="300">
+      <density value="1.7" units="g/cm3"/>
+      <nuclide name="C12" ao="0.988922"/>
+      <nuclide name="C13" ao="0.011078"/>
+      <sab name="c_Graphite"/>
+    </material>
+  </materials>
+  <geometry>
+    <cell id="1" name="inner_graphite" material="2" region="-1" universe="1"/>
+    <cell id="2" name="TRU_fuel_shell" material="1" region="1 -2" volume="3665191.429188092" universe="1"/>
+    <surface id="1" type="sphere" coeffs="0.0 0.0 0.0 50.0"/>
+    <surface id="2" type="sphere" boundary="vacuum" coeffs="0.0 0.0 0.0 100.0"/>
+  </geometry>
+  <settings>
+    <run_mode>fixed source</run_mode>
+    <particles>5000</particles>
+    <batches>30</batches>
+    <inactive>10</inactive>
+    <source type="independent" strength="100000000000000.0" particle="neutron">
+      <space type="point">
+        <parameters>0 0 0</parameters>
+      </space>
+      <angle type="isotropic"/>
+      <energy type="discrete">
+        <parameters>2450000.0 1.0</parameters>
+      </energy>
+    </source>
+    <seed>42</seed>
+  </settings>
+  <tallies>
+    <mesh id="1">
+      <dimension>44 44 44</dimension>
+      <lower_left>-110.0 -110.0 -110.0</lower_left>
+      <upper_right>110.0 110.0 110.0</upper_right>
+    </mesh>
+    <filter id="1" type="material">
+      <bins>1</bins>
+    </filter>
+    <filter id="2" type="mesh">
+      <bins>1</bins>
+    </filter>
+    <tally id="1" name="fission_nuclide">
+      <filters>1</filters>
+      <nuclides>U235 U238 Pu238 Pu239 Pu240 Pu241 Pu242</nuclides>
+      <scores>fission nu-fission</scores>
+    </tally>
+    <tally id="2" name="capture_nuclide">
+      <filters>1</filters>
+      <nuclides>U235 U238 Pu238 Pu239 Pu240 Pu241 Pu242</nuclides>
+      <scores>(n,gamma)</scores>
+    </tally>
+    <tally id="3" name="fission">
+      <filters>1</filters>
+      <scores>fission nu-fission</scores>
+    </tally>
+    <tally id="4" name="capture">
+      <filters>1</filters>
+      <scores>(n,gamma)</scores>
+    </tally>
+    <tally id="5" name="n2n">
+      <filters>1</filters>
+      <scores>(n,2n) (n,3n)</scores>
+    </tally>
+    <tally id="6" name="flux">
+      <filters>1</filters>
+      <scores>flux</scores>
+    </tally>
+    <tally id="7" name="3d_heating_tally">
+      <filters>2</filters>
+      <scores>heating</scores>
+    </tally>
+    <tally id="8" name="3d_flux_tally">
+      <filters>2</filters>
+      <scores>flux</scores>
+    </tally>
+    <tally id="9" name="3d_fission_tally">
+      <filters>2</filters>
+      <scores>fission</scores>
+    </tally>
+  </tallies>
+</model>

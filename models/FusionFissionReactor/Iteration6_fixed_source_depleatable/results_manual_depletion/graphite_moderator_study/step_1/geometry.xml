@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<geometry>
+  <cell id="1" name="inner_graphite" material="2" region="-1" universe="1"/>
+  <cell id="2" name="TRU_fuel_shell" material="1" region="1 -2" volume="3665191.429188092" universe="1"/>
+  <surface id="1" type="sphere" coeffs="0.0 0.0 0.0 50.0"/>
+  <surface id="2" type="sphere" boundary="vacuum" coeffs="0.0 0.0 0.0 100.0"/>
+</geometry>
